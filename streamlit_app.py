@@ -9,37 +9,18 @@ menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkul
 # CSS Custom
 st.markdown("""
     <style>
-    .beranda-container {
-        background-color: #f0f9f4;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .beranda-title {
-        font-size: 36px;
-        color: #2e7d32;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .beranda-subtitle {
-        font-size: 20px;
-        color: #4caf50;
-        margin-bottom: 20px;
-    }
-
+        .title { font-size: 36px; color: #2c3e50; font-weight: bold; }
+        .subtitle { font-size: 24px; color: #34495e; }
     </style>
 """, unsafe_allow_html=True)
-
 # Halaman: Beranda
 if menu == "Beranda":
     st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_countainer_width=True)
+    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_colum_width=True)
     st.write("""
         Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
         Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
-    """,unsafe_allow_html=True)
+    """)
 
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
@@ -52,7 +33,7 @@ elif menu == "Proses Pengolahan":
     3. **Pengolahan Sekunder:** Proses biologis (aerob/anaerob).  
     4. **Pengolahan Tersier:** Penghilangan senyawa kimia & disinfeksi.  
     5. **Pembuangan Aman:** Air hasil olahan dibuang sesuai standar baku mutu.
-    """,unsafe_allow_html=True)
+    """)
 
 # Halaman: Kalkulator Uji Lab
 elif menu == "Kalkulator Uji Lab":
@@ -114,4 +95,53 @@ elif menu == "Tentang Aplikasi":
     - Pengembang: [Nama Kamu]  
     - Versi: 1.0  
     - Sumber data: Modul Teknik Lingkungan, Litbang KLHK  
-    """,unsafe_allow_html=True)
+    """)
+
+import streamlit as st
+
+# Konfigurasi halaman
+st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
+
+# Tambahkan CSS kustom (tema hijau)
+st.markdown("""
+    <style>
+        body {
+            background-color: #f4f9f4;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2e7d32;
+            padding: 15px 0;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #388e3c;
+            margin-bottom: 10px;
+        }
+        .content-box {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Tampilkan isi halaman "Beranda"
+st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+
+# Gambar
+st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_container_width=True)
+
+# Konten dalam box
+st.markdown("""
+<div class="content-box">
+    <div class="subtitle">Simulasi Menuju Lingkungan Bersih dan Berkelanjutan</div>
+    <p>
+        Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
+        Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
+    </p>
+</div>
+""", unsafe_allow_html=True)
