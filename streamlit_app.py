@@ -21,7 +21,7 @@ if menu == "Beranda":
 
     col1, col2 = st.columns([1, 1.2])
     with col1:
-        st.image("https://cdn.pixabay.com/photo/2017/02/01/22/02/clean-2033340_1280.jpg", use_container_width=True)
+        st.image("limbah.jpg", use_container_width=True)
     with col2:
         st.success("""
         Aplikasi ini dirancang sebagai alat bantu edukatif untuk:
