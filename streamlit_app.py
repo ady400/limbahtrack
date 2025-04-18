@@ -36,8 +36,8 @@ st.markdown("---")
 st.markdown("© 2025 EduWaste App | Dibuat untuk pembelajaran")
 
 # ---------- Halaman MATERI ----------
-materi= "materi"
-    st.subheader("📘 Materi Pembelajaran")
+if materi== "materi":
+    st.subheader("📘 Materi Pembelajaran")#<-terlalu banyak spasi
     st.info("Klik untuk membuka tiap topik 👇")
 
     with st.expander("📖 Pengenalan Limbah Industri"):
