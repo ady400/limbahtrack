@@ -15,10 +15,35 @@ st.markdown("""
 
 # Halaman: Beranda
 if menu == "Beranda":
-    st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.write("""Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
-        Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.""")
+    st.markdown('<div class="title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Edukasi | Simulasi | Lingkungan</div>', unsafe_allow_html=True)
+    st.write("---")
 
+    col1, col2 = st.columns([1, 1.2])
+
+    with col1:
+        st.image(https://pin.it/eRwr0NH6O, use_column_width=True)
+    with col2:
+        st.write("""
+        Selamat datang di aplikasi *Pengolahan Limbah Industri*, sebuah platform interaktif yang dirancang untuk:
+        - Memberikan edukasi tentang proses pengolahan limbah
+        - Menyediakan alat bantu simulasi pengujian kualitas air limbah
+        - Menumbuhkan kesadaran terhadap pentingnya pengelolaan limbah yang berkelanjutan
+
+        *Mengapa ini penting?*  
+        Karena pengolahan limbah yang buruk bisa mencemari air, tanah, dan merusak ekosistem.
+        """)
+
+    st.write("### Fitur Unggulan")
+    fitur = {
+        "⚙️ Proses Pengolahan": "Pelajari tahapan penting dalam pengolahan limbah industri.",
+        "🧪 Kalkulator Lab": "Simulasikan uji COD, BOD, pH, dan TSS dengan mudah.",
+        "📊 Simulasi Pengolahan": "Uji efisiensi sistem pengolahan berdasarkan jenis limbah.",
+        "ℹ️ Tentang Aplikasi": "Kenali aplikasi dan pengembang di baliknya."
+    }
+
+    for icon, desc in fitur.items():
+        st.markdown(f"*{icon}* – {desc}")
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
     st.markdown('<div class="title">Proses Pengolahan Limbah</div>', unsafe_allow_html=True)
