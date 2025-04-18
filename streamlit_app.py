@@ -4,7 +4,30 @@ import streamlit as st
 st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkulator Uji Lab", "Simulasi Pengolahan", "Tentang Aplikasi"])
+# Atur style global (warna sidebar)
+st.markdown("""
+    <style>
+    .css-1d391kg, .css-1cypcdb, .css-1v3fvcr {background-color: #e8f5e9;} /* Sidebar hijau muda */
+    .css-18e3th9 {padding-top: 2rem;}
+    .css-10trblm {color: #2e7d32;} /* Warna teks utama */
+    </style>
+""", unsafe_allow_html=True)
+
+# Menu di sidebar
+with st.sidebar:
+    menu = option_menu(
+        "Menu",
+        ["Beranda", "Proses Pengolahan", "Kalkulator COD", "Tentang Aplikasi"],
+        icons=["house", "gear", "calculator", "info-circle"],
+        menu_icon="cast",
+        default_index=0,
+        styles={
+            "container": {"padding": "5px", "background-color": "#e8f5e9"},
+            "icon": {"color": "#2e7d32", "font-size": "20px"},
+            "nav-link": {"font-size": "16px", "text-align": "left", "margin": "4px", "--hover-color": "#c8e6c9"},
+            "nav-link-selected": {"background-color": "#66bb6a", "color": "white"},
+        }
+    )
 
 # CSS untuk styling
 st.markdown("""
