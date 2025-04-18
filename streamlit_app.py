@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title="WasteVisual", layout="centered")
 st.title("WasteVisual: Visualisasi Data Limbah Industri")
 
-uploaded_file = st.file_uploader("Unggah file word berisi data limbah", type="word")
+uploaded_file = st.file_uploader("Unggah file word berisi data limbah", type="docx")
 
 if uploaded_file:
     df = pd.read_word(uploaded_file)
