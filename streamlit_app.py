@@ -11,13 +11,14 @@ menu = st.sidebar.radio("📚 Pilih Halaman", ["Beranda", "Materi", "Kalkulator 
 
 # ---------- Halaman BERANDA ----------
 if menu == "Beranda":
+    if menu == "Beranda":
     st.markdown('<h3 style="color: teal;">👋 Selamat Datang Mahasiswa Teknik Lingkungan!</h3>', unsafe_allow_html=True)
     st.write("Aplikasi ini membantu kamu memahami dasar-dasar pengolahan limbah industri dengan cara yang interaktif.")
 
-    st.image("https://images.unsplash.com/photo-1605648916317-013feaa7b007", caption="Ilustrasi Pengolahan Limbah", use_column_width=True)
+    st.image("https://images.unsplash.com/photo-1605648916317-013feaa7b007", 
+             caption="Ilustrasi Pengolahan Limbah", use_container_width=True)
 
     st.success("➡️ Gunakan menu di samping untuk mulai belajar, menghitung COD, atau mengunggah laporan.")
-
 # ---------- Halaman MATERI ----------
 elif menu == "Materi":
     st.subheader("📘 Materi Pembelajaran")
@@ -76,4 +77,5 @@ elif menu == "Kontak":
     📱 **WhatsApp**: [Klik untuk chat](https://wa.me/6281234567890)  
     🌐 **Website**: [limbahedu.streamlit.app](https://limbahedu.streamlit.app)
     """)
-    st.image("https://images.unsplash.com/photo-1581091012184-7a1dafe88afc", caption="Kolaborasi untuk Lingkungan Bersih 🌎", use_column_width=True)
+    st.image("https://images.unsplash.com/photo-1581091012184-7a1dafe88afc", 
+             caption="Kolaborasi untuk Lingkungan Bersih 🌎", use_container_width=True)
