@@ -4,6 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
 
 # Sidebar Navigasi
+menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkulator Uji Lab", "Simulasi Pengolahan", "Tentang Aplikasi"])
 # Atur style global (warna sidebar)
 st.markdown("""
     <style>
@@ -15,7 +16,7 @@ st.markdown("""
 
 # Menu di sidebar
 with st.sidebar:
-    menu = st.sidebar.selecbox(
+    menu = options_menu(
         "Menu",
         ["Beranda", "Proses Pengolahan", "Kalkulator COD", "Tentang Aplikasi"],
         icons=["house", "gear", "calculator", "info-circle"],
