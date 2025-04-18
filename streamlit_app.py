@@ -8,9 +8,11 @@ st.title("WasteVisual: Visualisasi Data Limbah Industri")
 uploaded_file = st.file_uploader("Unggah file word berisi data limbah", type="docx")
 
 if uploaded_file:
-    df = pd.read_word(uploaded_file)
-    st.subheader("Data Limbah yang Diupload:")
-    st.dataframe(df)
+    doc = document(uploaded_file)
+    full_text = ""
+    for para in doc.paragraphs:
+        full_text += para.text + "\n"
+
 
     st.subheader("Grafik COD")
     fig_cod = px.line(df, x='Tanggal', y='COD (mg/L)', markers=True, title="Tren COD")
