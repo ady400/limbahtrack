@@ -10,18 +10,14 @@ menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkul
 st.markdown("""
     <style>
         .title { font-size: 36px; color: #2c3e50; font-weight: bold; }
-        .subtitle { font-size: 24px; color: #34495e; }
-    </style>
-""", unsafe_allow_html=True)
+        .subtitle { font-size: 24px; color: #34495e; } 
+        </style>""", unsafe_allow_html=True)
 
 # Halaman: Beranda
 if menu == "Beranda":
     st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_column_width=True)
-    st.write("""
-        Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
-        Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
-    """)
+    st.write("""Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
+        Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.""")
 
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
@@ -85,6 +81,3 @@ elif menu == "Simulasi Pengolahan":
     if st.button("Simulasikan"):
         hasil = konsentrasi_awal * (1 - efisiensi)
         st.success(f"Hasil akhir setelah pengolahan: {hasil:.2f} mg/L (efisiensi {efisiensi*100:.0f}%)")
-
-# Halaman: Tentang Aplikasi
-elif menu == "Tentang Aplikasi":
