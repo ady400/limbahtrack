@@ -3,74 +3,26 @@ import streamlit as st
 # Konfigurasi
 st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
 
-# Styling custom sidebar
-st.markdown("""
-    <style>
-    .sidebar .sidebar-content {
-        background-color: #e8f5e9;
-        padding: 20px;
-    }
-    .css-10trblm { color: #1b5e20; font-weight: bold; font-size: 24px; }
-    .css-1d391kg { color: #2e7d32; }
-    </style>
-""", unsafe_allow_html=True)
-
-# Sidebar logo dan menu
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/1076/1076742.png", width=60)
-st.sidebar.title("Navigasi")
-
-menu = st.sidebar.radio(
-    "Pilih Halaman",
-    ("Beranda", "Proses Pengolahan", "Kalkulator COD", "Tentang Aplikasi")
-)
-
-# Cek menu yang dipilih
-if menu == "Beranda":
-    st.title("Selamat Datang di Aplikasi Limbah Industri")
-elif menu == "Proses Pengolahan":
-    st.title("Tahapan Proses Pengolahan Limbah")
-elif menu == "Kalkulator COD":
-    st.title("Simulasi Perhitungan COD")
-elif menu == "Tentang Aplikasi":
-    st.title("Tentang Aplikasi Ini")
+# Sidebar Navigasi
+menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkulator Uji Lab", "Simulasi Pengolahan", "Tentang Aplikasi"])
 
 # CSS untuk styling
 st.markdown("""
     <style>
         .title { font-size: 36px; color: #2c3e50; font-weight: bold; }
-        .subtitle { font-size: 24px; color: #34495e; } 
-        </style>""", unsafe_allow_html=True)
+        .subtitle { font-size: 24px; color: #34495e; }
+    </style>
+""", unsafe_allow_html=True)
 
 # Halaman: Beranda
 if menu == "Beranda":
-    st.markdown("## Selamat Datang di Aplikasi Limbah Industri")
-    st.markdown("### Edukasi dan Simulasi Pengolahan Limbah untuk Masa Depan yang Lebih Bersih")
-    st.write("---")
+    st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_column_width=True)
+    st.write("""
+        Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
+        Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
+    """)
 
-    col1, col2 = st.columns([1, 1.2])
-    with col1:
-        st.image("limbah.jpg", use_container_width=True)
-    with col2:
-        st.success("""
-        Aplikasi ini dirancang sebagai alat bantu edukatif untuk:
-
-        - Menjelaskan *tahapan pengolahan limbah industri*
-        - Memberikan *simulasi pengujian COD, BOD, pH, dan TSS*
-        - Meningkatkan kesadaran akan pentingnya pengelolaan limbah secara bertanggung jawab
-
-        Gunakan menu di samping untuk mulai belajar dan simulasi!
-        """)
-
-    st.write("### Fitur Unggulan")
-    col3, col4 = st.columns(2)
-
-    with col3:
-        st.info("⚙️ *Proses Pengolahan*\n\nPelajari tahapan proses limbah industri.")
-        st.info("🧪 *Kalkulator Uji Lab*\n\nHitung nilai COD, BOD, dan lainnya.")
-
-    with col4:
-        st.info("📊 *Simulasi Efisiensi*\n\nCoba efisiensi berdasarkan jenis limbah.")
-        st.info("ℹ️ *Tentang Aplikasi*\n\nInformasi dan tujuan pengembangan.")
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
     st.markdown('<div class="title">Proses Pengolahan Limbah</div>', unsafe_allow_html=True)
@@ -133,3 +85,15 @@ elif menu == "Simulasi Pengolahan":
     if st.button("Simulasikan"):
         hasil = konsentrasi_awal * (1 - efisiensi)
         st.success(f"Hasil akhir setelah pengolahan: {hasil:.2f} mg/L (efisiensi {efisiensi*100:.0f}%)")
+
+# Halaman: Tentang Aplikasi
+elif menu == "Tentang Aplikasi":
+    st.markdown('<div class="title">Tentang Aplikasi</div>', unsafe_allow_html=True)
+    st.write("""
+    *Aplikasi ini dikembangkan sebagai media edukatif dan simulatif dalam pengolahan limbah industri.*
+
+    - Dibuat dengan: Python + Streamlit  
+    - Pengembang: [Nama Kamu]  
+    - Versi: 1.0  
+    - Sumber data: Modul Teknik Lingkungan, Litbang KLHK  
+    """)
