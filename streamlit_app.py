@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
