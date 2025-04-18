@@ -1,4 +1,5 @@
-streamlit as 
+improt streamlit as st
+from pil import image
 
 Konfigurasi halaman
 
