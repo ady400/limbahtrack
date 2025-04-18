@@ -7,7 +7,7 @@ st.set_page_config(page_title="🌿 Limbah Edu", layout="centered")
 st.title("🌿 Aplikasi Edukasi Pengolahan Limbah Industri")
 
 # Sidebar Menu
-menu = st.sidebar.radio("📚 Pilih Halaman" "kotak hijau", ["Beranda", "Materi", "Kalkulator COD", "Upload Laporan", "Kontak"])
+menu = st.sidebar.radio("📚 Pilih Halaman", ["Beranda", "Materi", "Kalkulator COD", "Upload Laporan", "Kontak"])
 
 # ---------- Halaman BERANDA ----------
 if menu == "Beranda":
