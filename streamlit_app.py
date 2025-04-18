@@ -19,11 +19,9 @@ if menu == "Beranda":
     st.markdown('<div class="subtitle">Edukasi | Simulasi | Lingkungan</div>', unsafe_allow_html=True)
     st.write("---")
 
-    col1, col2 = st.columns([1, 1.2])
+    col1= st.columns([1, 1.2])
 
     with col1:
-        st.image(https://pin.it/eRwr0NH6O, use_column_width=True)
-    with col2:
         st.write("""
         Selamat datang di aplikasi *Pengolahan Limbah Industri*, sebuah platform interaktif yang dirancang untuk:
         - Memberikan edukasi tentang proses pengolahan limbah
