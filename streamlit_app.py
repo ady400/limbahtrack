@@ -39,4 +39,4 @@ if uploaded_file:
         st.dataframe(bod_melebihi[['Tanggal', 'BOD (mg/L)']])
 else:
     st.info("Silakan unggah file CSV terlebih dahulu.")
-pip install plotly
+
