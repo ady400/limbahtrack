@@ -1,12 +1,10 @@
-mport streamlit as st
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 
 st.set_page_config(page_title="WasteVisual", layout="centered")
-
 st.title("WasteVisual: Visualisasi Data Limbah Industri")
 
-# Upload file CSV
 uploaded_file = st.file_uploader("Unggah file CSV berisi data limbah", type="csv")
 
 if uploaded_file:
@@ -14,17 +12,14 @@ if uploaded_file:
     st.subheader("Data Limbah yang Diupload:")
     st.dataframe(df)
 
-    # Visualisasi COD
     st.subheader("Grafik COD")
     fig_cod = px.line(df, x='Tanggal', y='COD (mg/L)', markers=True, title="Tren COD")
     st.plotly_chart(fig_cod)
 
-    # Visualisasi BOD
     st.subheader("Grafik BOD")
     fig_bod = px.line(df, x='Tanggal', y='BOD (mg/L)', markers=True, title="Tren BOD")
     st.plotly_chart(fig_bod)
 
-    # Analisis ambang batas (misal COD > 200, BOD > 80)
     st.subheader("Analisis Kepatuhan Ambang Batas")
     cod_batas = 200
     bod_batas = 80
