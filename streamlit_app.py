@@ -73,5 +73,3 @@ elif menu == "Kontak":
     📱 **WhatsApp**: [Klik untuk chat](https://wa.me/6281234567890)  
     🌐 **Website**: [limbahedu.streamlit.app](https://limbahedu.streamlit.app)
     """)
-    st.image("https://images.unsplash.com/photo-1581091012184-7a1dafe88afc", 
-             caption="Kolaborasi untuk Lingkungan Bersih 🌎", use_container_width=True)
