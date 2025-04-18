@@ -6,38 +6,34 @@ menu = st.sidebar.radio("📚 Pilih Halaman", ["Beranda", "Materi", "Kalkulator 
 # ---------- Halaman BERANDA ----------
 if menu == "Beranda":
    if menu == "Beranda":
-    # Judul utama dengan emoji dan warna
-    st.markdown("""
-        <h2 style='text-align: center; color: #2E8B57;'>🌿 Selamat Datang di Aplikasi Edukasi Limbah Industri</h2>
-        <p style='text-align: center;'>Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.</p>
-    """, unsafe_allow_html=True)
+    st.set_page_config(page_title="Aplikasi Edukasi Limbah Industri", layout="wide")
 
-    # Gambar ilustrasi besar
-    st.image(
-        "https://images.unsplash.com/photo-1605648916317-013feaa7b007", 
-        caption="🔍 Proses pengolahan limbah cair industri", 
-        use_container_width=True
-    )
+# Header
+st.markdown("""
+    <div style='text-align: center; padding: 20px 0;'>
+        <h1 style='color: #2E7D32;'>🌿 Selamat Datang di Aplikasi Edukasi Limbah Industri</h1>
+        <p style='font-size: 18px;'>Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.</p>
+    </div>
+""", unsafe_allow_html=True)
 
-    # Box informasi
+# Gambar Utama
+st.image("https://cdn-icons-png.flaticon.com/512/3815/3815447.png", width=150)
+
+# Info Box
+with st.container():
     st.success("✅ Aplikasi ini dirancang untuk mahasiswa Teknik Lingkungan dan sejenisnya.")
 
-    # Tips belajar
-    st.markdown("""
-        ### 📌 Tips Menggunakan Aplikasi Ini:
-        - Navigasikan materi melalui sidebar ⬅️
-        - Gunakan Kalkulator COD untuk bantu hitung parameter laboratorium
-        - Upload laporan praktikum kamu langsung dari aplikasi!
-    """)
+# Tips Section
+st.markdown("### 📌 Tips Menggunakan Aplikasi Ini:")
+st.markdown("""
+- Navigasikan materi melalui sidebar ⬅️  
+- Gunakan *Kalkulator COD* untuk bantu hitung parameter laboratorium  
+- Ikuti urutan pembelajaran secara bertahap
+""")
 
-    # Quote inspiratif
-    st.info("💬 *“Menjaga lingkungan adalah investasi untuk masa depan.”*")
-
-    # Divider
-    st.markdown("---")
-
-    # Call to action
-    st.markdown("<h4 style='color: orange;'>Klik menu di kiri untuk mulai belajar 🚀</h4>", unsafe_allow_html=True)
+# Optional: Tambah menu lainnya atau link ke halaman lain
+st.markdown("---")
+st.markdown("© 2025 EduWaste App | Dibuat untuk pembelajaran")
 
 # ---------- Halaman MATERI ----------
 elif menu == "Materi":
