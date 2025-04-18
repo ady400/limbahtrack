@@ -1,78 +1,95 @@
+# app.py
 import streamlit as st
 from PIL import Image
 
-# CONFIGURASI HALAMAN
-st.set_page_config(page_title="Edukasi Limbah Industri", layout="wide", page_icon="♻️")
+# --- Page Configuration ---
+st.set_page_config(page_title="Limbah Edukasi", layout="wide")
 
-# HEADER UTAMA
-st.markdown(
-    """
-    <div style='text-align: center; padding: 20px 0'>
-        <h1 style='color: green;'>♻️ Aplikasi Edukasi Limbah Industri</h1>
-        <p style='font-size: 18px;'>Belajar mengelola limbah industri jadi lebih mudah dan menyenangkan!</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# --- Custom CSS for styling ---
+st.markdown("""
+    <style>
+        .title-main {
+            font-size: 36px;
+            font-weight: bold;
+            color: #00aa55;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .highlight-box {
+            background-color: #e0ffe5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-# TABS LAYOUT
-tab1, tab2, tab3, tab4 = st.tabs(["🏭 Edukasi", "🧮 Kalkulator", "💡 Tips & Fakta", "📸 Galeri"])
+# --- Header ---
+st.markdown("<div class='title-main'>🌿 Aplikasi Edukasi Pengolahan Limbah Industri</div>", unsafe_allow_html=True)
+st.markdown("Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.")
 
-# TAB 1 - EDUKASI
-with tab1:
-    st.subheader("Apa Itu Limbah Industri?")
-    st.write("""
-        Limbah industri adalah sisa hasil dari aktivitas produksi pabrik yang bisa berbentuk cair, padat, atau gas. 
-        Jika tidak dikelola dengan baik, limbah ini bisa mencemari lingkungan dan membahayakan kesehatan manusia.
-    """)
+# --- Sidebar Navigation ---
+menu = st.sidebar.radio("Navigasi", ["Beranda", "Materi Pembelajaran", "Kalkulator COD/BOD", "Simulasi Proses", "Kuis", "Galeri"])
 
-    st.markdown("### Jenis Pengolahan:")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown("*Fisik*")
-        st.image("https://img.icons8.com/color/96/filters.png", width=50)
-        st.write("Contoh: sedimentasi, penyaringan")
-    with col2:
-        st.markdown("*Kimia*")
-        st.image("https://img.icons8.com/color/96/test-tube.png", width=50)
-        st.write("Contoh: koagulasi, netralisasi")
-    with col3:
-        st.markdown("*Biologi*")
-        st.image("https://img.icons8.com/color/96/eco.png", width=50)
-        st.write("Contoh: pengolahan aerob & anaerob")
-
-# TAB 2 - KALKULATOR COD
-with tab2:
-    st.subheader("Kalkulator Beban COD")
-
-    volume = st.number_input("Masukkan Volume Air Limbah (liter)", min_value=0.0, step=0.1)
-    konsentrasi = st.number_input("Masukkan Konsentrasi COD (mg/L)", min_value=0.0, step=0.1)
-
-    if st.button("Hitung COD"):
-        cod = volume * konsentrasi / 1000  # dalam gram
-        st.success(f"Beban COD = {cod:.2f} gram")
-
-# TAB 3 - TIPS
-with tab3:
-    st.subheader("Tips & Fakta Pengolahan Limbah")
-
+# --- Beranda ---
+if menu == "Beranda":
+    st.image("https://images.unsplash.com/photo-1603575448366-a0c47cd45e0f", use_column_width=True)
     st.markdown("""
-    - ✅ Gunakan metode kombinasi (fisik, kimia, biologi) untuk efisiensi tinggi.
-    - ✅ Selalu pantau parameter penting seperti pH, suhu, COD, dan BOD.
-    - ✅ Edukasi karyawan pabrik agar lebih peduli terhadap lingkungan.
-    - ✅ Terapkan prinsip reduce, reuse, recycle (3R).
+    <div class="highlight-box">
+    ✅ Aplikasi ini dirancang untuk mahasiswa Teknik Lingkungan dan siapa pun yang ingin belajar tentang pengolahan limbah industri.
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("### Tips Menggunakan Aplikasi:")
+    st.markdown("- Gunakan sidebar untuk menjelajahi fitur.")
+    st.markdown("- Kalkulator COD/BOD bisa bantu hitung parameter laboratorium.")
+    st.markdown("- Simulasi cocok untuk visualisasi alur pengolahan limbah.")
 
-    *Tahukah kamu?*  
-    Limbah dari industri makanan dan minuman tergolong lebih mudah diolah secara biologis dibanding limbah tekstil!
-    """)
+# --- Materi Pembelajaran ---
+elif menu == "Materi Pembelajaran":
+    st.header("📘 Materi Pembelajaran")
+    with st.expander("Pengertian Limbah Industri"):
+        st.write("Limbah industri adalah limbah yang dihasilkan dari aktivitas industri...")
+    with st.expander("Jenis-jenis Limbah"):
+        st.write("- Limbah cair\n- Limbah padat\n- Limbah gas")
+    with st.expander("Dampak Limbah"):
+        st.write("Pencemaran lingkungan, dampak kesehatan, dll.")
 
-# TAB 4 - GALERI
-with tab4:
-    st.subheader("Galeri Limbah Industri")
-    st.image("https://images.unsplash.com/photo-1581091012184-7f831f3a0c6f", caption="Proses di Pabrik", use_column_width=True)
-    st.image("https://images.unsplash.com/photo-1589187155940-61150b927da2", caption="Pengolahan Air Limbah", use_column_width=True)
+# --- Kalkulator COD/BOD ---
+elif menu == "Kalkulator COD/BOD":
+    st.header("🧪 Kalkulator COD & BOD")
+    vol = st.number_input("Volume Sampel (mL)", min_value=0.0, format="%.2f")
+    normalitas = st.number_input("Normalitas Titrasi (N)", min_value=0.0, format="%.3f")
+    titran_blanko = st.number_input("Volume Titrasi Blanko (mL)", min_value=0.0)
+    titran_sampel = st.number_input("Volume Titrasi Sampel (mL)", min_value=0.0)
+    
+    if st.button("Hitung COD"):
+        try:
+            cod = (titran_blanko - titran_sampel) * normalitas * 8000 / vol
+            st.success(f"Hasil COD: {cod:.2f} mg/L")
+        except:
+            st.error("Input tidak valid.")
 
-# SIDEBAR
-st.sidebar.title("Navigasi")
-st.sidebar.info("Pilih tab di atas untuk menjelajahi fitur aplikasi.")
-st.sidebar.markdown("Made with ❤️ by [Nama Kamu]")
+# --- Simulasi Proses ---
+elif menu == "Simulasi Proses":
+    st.header("🧯 Simulasi Proses Pengolahan Limbah")
+    proses = st.selectbox("Pilih Tahapan Proses", ["Screening", "Sedimentasi", "Aerasi", "Disinfeksi"])
+    if proses == "Screening":
+        st.image("https://i.imgur.com/Yz9D1tP.png")
+        st.write("Screening bertujuan menyaring benda besar seperti plastik...")
+    elif proses == "Sedimentasi":
+        st.image("https://i.imgur.com/oQKq8N3.png")
+        st.write("Proses ini memisahkan partikel padat dari cairan...")
+    elif proses == "Aerasi":
+        st.image("https://i.imgur.com/C8jqF1g.png")
+        st.write("Aerasi menambah oksigen terlarut untuk mendukung bakteri pengurai...")
+    else:
+        st.image("https://i.imgur.com/xVu6Ypi.png")
+        st.write("Disinfeksi menggunakan klorin atau ozon untuk membunuh mikroorganisme...")
+
+# --- Kuis Interaktif ---
+elif menu == "Kuis":
+    st.header("📝 Kuis Pengolahan Limbah")
+    q1 = st.radio("1. Apa tujuan dari proses aerasi?", ["Menyari…
