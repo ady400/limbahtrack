@@ -9,7 +9,7 @@ menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkul
 # CSS Custom
 st.markdown("""
     <style>
-    .beranda-class "container" {
+    .beranda-container {
         background-color: #f0f9f4;
         padding: 30px;
         border-radius: 15px;
