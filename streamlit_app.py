@@ -1,19 +1,44 @@
 import streamlit as st
 import pandas as pd
-
-# Konfigurasi halaman
-st.set_page_config(page_title="🌿 Limbah Edu", layout="centered")
-
-st.title("🌿 Aplikasi Edukasi Pengolahan Limbah Industri")
-
 # Sidebar Menu
 menu = st.sidebar.radio("📚 Pilih Halaman", ["Beranda", "Materi", "Kalkulator COD", "Upload Laporan", "Kontak"])
 
 # ---------- Halaman BERANDA ----------
 if menu == "Beranda":
    if menu == "Beranda":
-    st.markdown('<h3 style="color: green;"> Selamat Datang Mahasiswa politeknik AKA Bogor!</h3>', unsafe_allow_html=True)
-    st.write("Aplikasi ini membantu kamu memahami dasar-dasar pengolahan limbah industri dengan cara yang interaktif.")
+    # Judul utama dengan emoji dan warna
+    st.markdown("""
+        <h2 style='text-align: center; color: #2E8B57;'>🌿 Selamat Datang di Aplikasi Edukasi Limbah Industri</h2>
+        <p style='text-align: center;'>Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.</p>
+    """, unsafe_allow_html=True)
+
+    # Gambar ilustrasi besar
+    st.image(
+        "https://images.unsplash.com/photo-1605648916317-013feaa7b007", 
+        caption="🔍 Proses pengolahan limbah cair industri", 
+        use_container_width=True
+    )
+
+    # Box informasi
+    st.success("✅ Aplikasi ini dirancang untuk mahasiswa Teknik Lingkungan dan sejenisnya.")
+
+    # Tips belajar
+    st.markdown("""
+        ### 📌 Tips Menggunakan Aplikasi Ini:
+        - Navigasikan materi melalui sidebar ⬅️
+        - Gunakan Kalkulator COD untuk bantu hitung parameter laboratorium
+        - Upload laporan praktikum kamu langsung dari aplikasi!
+    """)
+
+    # Quote inspiratif
+    st.info("💬 *“Menjaga lingkungan adalah investasi untuk masa depan.”*")
+
+    # Divider
+    st.markdown("---")
+
+    # Call to action
+    st.markdown("<h4 style='color: orange;'>Klik menu di kiri untuk mulai belajar 🚀</h4>", unsafe_allow_html=True)
+
 # ---------- Halaman MATERI ----------
 elif menu == "Materi":
     st.subheader("📘 Materi Pembelajaran")
