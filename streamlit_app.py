@@ -89,7 +89,3 @@ elif menu == "Simulasi Proses":
         st.image("https://i.imgur.com/xVu6Ypi.png")
         st.write("Disinfeksi menggunakan klorin atau ozon untuk membunuh mikroorganisme...")
 
-# --- Kuis Interaktif ---
-elif menu == "Kuis":
-    st.header("📝 Kuis Pengolahan Limbah")
-    q1 = st.radio("1. Apa tujuan dari proses aerasi?", ["Menyari…
