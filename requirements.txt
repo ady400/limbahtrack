@@ -1,1 +1,2 @@
-streamlit run limbah_app.py
+streamlit 
+python-pdf
