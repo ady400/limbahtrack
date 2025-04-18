@@ -1,46 +1,30 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-# Set title and layout
-st.set_page_config(page_title="Pengolahan Limbah Industri", layout="wide")
-st.title("Pengolahan Limbah Industri")
-st.markdown("<style>body{background-color: #e0f7e0;}</style>", unsafe_allow_html=True)
+st.set_page_config(page_title="Aplikasi Edukasi Limbah Industri", layout="wide")
 
-# Sidebar for navigation
-st.sidebar.title("Navigasi")
-options = st.sidebar.radio("Pilih Halaman:", ["Beranda", "Statistik", "Berita Terbaru"])
+# Header
+st.markdown("""
+    <div style='text-align: center; padding: 20px 0;'>
+        <h1 style='color: #2E7D32;'>🌿 Selamat Datang di Aplikasi Edukasi Limbah Industri</h1>
+        <p style='font-size: 18px;'>Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.</p>
+    </div>
+""", unsafe_allow_html=True)
 
-# Beranda
-if options == "Beranda":
-    st.header("Selamat Datang di Aplikasi Pengolahan Limbah Industri")
-    st.write("Aplikasi ini bertujuan untuk memberikan informasi dan statistik mengenai pengolahan limbah industri.")
-    st.image("https://example.com/image.jpg", caption="Pengolahan Limbah Industri", use_column_width=True)
+# Gambar Utama
+st.image("https://cdn-icons-png.flaticon.com/512/3815/3815447.png", width=150)
 
-# Statistik
-elif options == "Statistik":
-    st.header("Statistik Pengolahan Limbah")
-    # Contoh data
-    data = {
-        'Jenis Limbah': ['Limbah Cair', 'Limbah Padat', 'Limbah Gas'],
-        'Jumlah (ton)': [1500, 800, 300]
-    }
-    df = pd.DataFrame(data)
+# Info Box
+with st.container():
+    st.success("✅ Aplikasi ini dirancang untuk mahasiswa Teknik Lingkungan dan sejenisnya.")
 
-    # Tampilkan tabel
-    st.write("Tabel Statistik:")
-    st.dataframe(df)
+# Tips Section
+st.markdown("### 📌 Tips Menggunakan Aplikasi Ini:")
+st.markdown("""
+- Navigasikan materi melalui sidebar ⬅️  
+- Gunakan *Kalkulator COD* untuk bantu hitung parameter laboratorium  
+- Ikuti urutan pembelajaran secara bertahap
+""")
 
-    # Grafik
-    st.bar_chart(df.set_index('Jenis Limbah'))
-
-# Berita Terbaru
-elif options == "Berita Terbaru":
-    st.header("Berita Terbaru tentang Pengolahan Limbah")
-    st.write("1. Inovasi dalam Pengolahan Limbah Cair di Indonesia.")
-    st.write("2. Peraturan Baru tentang Pengelolaan Limbah Padat.")
-    st.write("3. Teknologi Terbaru dalam Pengurangan Limbah Gas.")
-
-# Footer
+# Optional: Tambah menu lainnya atau link ke halaman lain
 st.markdown("---")
-st.write("Aplikasi ini dibuat untuk meningkatkan kesadaran tentang pentingnya pengolahan limbah industri.")
+st.markdown("© 2025 EduWaste App | Dibuat untuk pembelajaran")
