@@ -35,11 +35,11 @@ st.markdown("""
 # Halaman: Beranda
 if menu == "Beranda":
     st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_column_width=True)
+    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_countainer_width=True)
     st.write("""
         Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
         Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
-    """)
+    """,unsafe_allow_html=True)
 
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
@@ -52,7 +52,7 @@ elif menu == "Proses Pengolahan":
     3. **Pengolahan Sekunder:** Proses biologis (aerob/anaerob).  
     4. **Pengolahan Tersier:** Penghilangan senyawa kimia & disinfeksi.  
     5. **Pembuangan Aman:** Air hasil olahan dibuang sesuai standar baku mutu.
-    """)
+    """,unsafe_allow_html=True)
 
 # Halaman: Kalkulator Uji Lab
 elif menu == "Kalkulator Uji Lab":
@@ -114,4 +114,4 @@ elif menu == "Tentang Aplikasi":
     - Pengembang: [Nama Kamu]  
     - Versi: 1.0  
     - Sumber data: Modul Teknik Lingkungan, Litbang KLHK  
-    """)
+    """,unsafe_allow_html=True)
