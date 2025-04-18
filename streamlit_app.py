@@ -1,18 +1,18 @@
 import streamlit as st 
 
-Konfigurasi halaman
+#Konfigurasi halaman
 
 st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
 
-CSS kustom
+#CSS kustom
 
 st.markdown(""" <style> .title { font-size: 36px; color: #1b5e20; font-weight: bold; text-align: center; margin-bottom: 20px; } .subtitle { font-size: 20px; color: #388e3c; text-align: center; margin-bottom: 40px; } .sidebar .sidebar-content { background-color: #e8f5e9; padding: 20px; } </style> """, unsafe_allow_html=True)
 
-Sidebar Navigasi dengan ikon (opsional)
+#Sidebar Navigasi dengan ikon (opsional)
 
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/1076/1076742.png", width=60) st.sidebar.title("Navigasi") menu = st.sidebar.radio("Pilih Halaman", [ "Beranda", "Proses Pengolahan", "Kalkulator Uji Lab", "Simulasi Pengolahan", "Tentang Aplikasi" ])
 
-BERANDA
+#BERANDA
 
 if menu == "Beranda": st.markdown('<div class="title">Selamat Datang di Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True) st.markdown('<div class="subtitle">Simulasi Menuju Lingkungan Bersih dan Berkelanjutan</div>', unsafe_allow_html=True)
 
@@ -27,7 +27,7 @@ with col2:
     - Meningkatkan kesadaran akan pentingnya pengelolaan limbah
     """)
 
-PROSES PENGOLAHAN
+#PROSES PENGOLAHAN
 
 elif menu == "Proses Pengolahan": st.markdown('<div class="title">Tahapan Pengolahan Limbah</div>', unsafe_allow_html=True) st.info("Berikut ini adalah tahapan umum dalam pengolahan limbah industri:") st.markdown(""" 1. Pra-pengolahan: Penyaringan kasar, pemisahan padatan besar
 2. Pengolahan Primer: Sedimentasi untuk mengendapkan partikel
@@ -35,7 +35,7 @@ elif menu == "Proses Pengolahan": st.markdown('<div class="title">Tahapan Pengol
 4. Pengolahan Tersier: Penghilangan senyawa kimia & disinfeksi
 5. Pembuangan Aman: Air hasil olahan dibuang sesuai standar baku mutu """)
 
-KALKULATOR UJI LAB
+#KALKULATOR UJI LAB
 
 elif menu == "Kalkulator Uji Lab": st.markdown('<div class="title">Kalkulator Uji Laboratorium</div>', unsafe_allow_html=True) opsi = st.radio("Pilih Uji:", ["COD", "BOD", "TSS", "pH"])
 
@@ -66,7 +66,7 @@ elif opsi == "pH":
     ph_val = st.slider("Masukkan nilai pH", 0.0, 14.0, 7.0)
     st.info(f"Nilai pH sampel adalah {ph_val}")
 
-SIMULASI PENGOLAHAN
+#SIMULASI PENGOLAHAN
 
 elif menu == "Simulasi Pengolahan": st.markdown('<div class="title">Simulasi Efisiensi Pengolahan Limbah</div>', unsafe_allow_html=True) jenis = st.selectbox("Jenis Limbah", ["Organik", "Kimia", "Campuran"]) kons_awal = st.number_input("Konsentrasi Awal (mg/L)", 0.0, 10000.0, 500.0)
 
@@ -76,7 +76,7 @@ if st.button("Simulasikan"):
     hasil = kons_awal * (1 - efisiensi)
     st.success(f"Konsentrasi akhir: {hasil:.2f} mg/L | Efisiensi {efisiensi*100:.0f}%")
 
-TENTANG APLIKASI
+#TENTANG APLIKASI
 
 elif menu == "Tentang Aplikasi": st.markdown('<div class="title">Tentang Aplikasi</div>', unsafe_allow_html=True) st.write(""" Aplikasi Edukasi dan Simulasi Limbah Industri
 
