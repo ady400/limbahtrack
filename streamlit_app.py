@@ -15,33 +15,65 @@ st.markdown("""
 
 # Halaman: Beranda
 if menu == "Beranda":
-    st.markdown('<div class="title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Edukasi | Simulasi | Lingkungan</div>', unsafe_allow_html=True)
-    st.write("---")
+    st.markdown(
+        """
+        <style>
+        .hero-title {
+            font-size: 42px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .hero-sub {
+            font-size: 22px;
+            color: #5d6d7e;
+            margin-top: -10px;
+        }
+        .card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True)
 
-    col1= st.columns([1, 1.2])
+    st.markdown('<div class="hero-title">Selamat Datang di Aplikasi Limbah Industri</div>', unsafe_allow_html=True)
+    st.markdown('<div class="hero-sub">Edukasi dan Simulasi Pengolahan Limbah untuk Masa Depan yang Lebih Bersih</div>', unsafe_allow_html=True)
+    st.write("")
 
+    col1, col2 = st.columns(2)
     with col1:
-        st.write("""
-        Selamat datang di aplikasi *Pengolahan Limbah Industri*, sebuah platform interaktif yang dirancang untuk:
-        - Memberikan edukasi tentang proses pengolahan limbah
-        - Menyediakan alat bantu simulasi pengujian kualitas air limbah
-        - Menumbuhkan kesadaran terhadap pentingnya pengelolaan limbah yang berkelanjutan
+        st.image("https://cdn.pixabay.com/photo/2017/02/01/22/02/clean-2033340_1280.jpg", use_column_width=True)
+    with col2:
+        st.markdown("""
+        Aplikasi ini dirancang sebagai alat bantu edukatif untuk:
+        - Menjelaskan *tahapan pengolahan limbah industri*
+        - Memberikan *simulasi pengujian COD, BOD, pH, dan TSS*
+        - Meningkatkan kesadaran akan pentingnya pengelolaan limbah secara bertanggung jawab
 
-        *Mengapa ini penting?*  
-        Karena pengolahan limbah yang buruk bisa mencemari air, tanah, dan merusak ekosistem.
+        Gunakan menu di samping untuk mulai belajar dan simulasi!
         """)
 
-    st.write("### Fitur Unggulan")
-    fitur = {
-        "⚙️ Proses Pengolahan": "Pelajari tahapan penting dalam pengolahan limbah industri.",
-        "🧪 Kalkulator Lab": "Simulasikan uji COD, BOD, pH, dan TSS dengan mudah.",
-        "📊 Simulasi Pengolahan": "Uji efisiensi sistem pengolahan berdasarkan jenis limbah.",
-        "ℹ️ Tentang Aplikasi": "Kenali aplikasi dan pengembang di baliknya."
-    }
+    st.write("## Fitur Unggulan")
+    fitur_col = st.columns(2)
 
-    for icon, desc in fitur.items():
-        st.markdown(f"*{icon}* – {desc}")
+    fitur_data = [
+        ("⚙️ Proses Pengolahan", "Pelajari tahap-tahap pengolahan limbah industri secara visual dan sistematis."),
+        ("🧪 Kalkulator Uji Lab", "Hitung nilai COD, BOD, TSS, dan pH langsung dari datamu."),
+        ("📊 Simulasi Efisiensi", "Simulasikan efisiensi sistem berdasarkan jenis limbah."),
+        ("ℹ️ Tentang Aplikasi", "Kenali latar belakang dan tujuan aplikasi ini.")
+    ]
+
+    for i, (judul, deskripsi) in enumerate(fitur_data):
+        with fitur_col[i % 2]:
+            st.markdown(f"""
+                <div class="card">
+                    <h4>{judul}</h4>
+                    <p>{deskripsi}</p>
+                </div>
+            """, unsafe_allow_html=True)
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
     st.markdown('<div class="title">Proses Pengolahan Limbah</div>', unsafe_allow_html=True)
