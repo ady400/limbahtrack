@@ -1,8 +1,9 @@
 import streamlit as st
 from PIL import Image
 
+# Menu "Beranda"
 if menu == "Beranda":
-    # --- Styling Header ---
+    # Styling Header (judul)
     st.markdown("""
         <style>
             .title {
@@ -24,13 +25,17 @@ if menu == "Beranda":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # --- Gambar Canva (desain kamu) ---
-    img = Image.open("assets/beranda_canva.png")
-    st.image(img, use_container_width=True)
+    # Memastikan gambar ada di folder assets/
+    img_path = "assets/beranda_canva.png"
+    if os.path.exists(img_path):
+        img = Image.open(img_path)
+        st.image(img, use_container_width=True)
+    else:
+        st.error("Gambar tidak ditemukan di folder 'assets/'")
 
     st.markdown("---")
 
-    # --- Info Box Interaktif ---
+    # Info Box
     st.success("👋 Selamat datang! Aplikasi ini cocok untuk mahasiswa Teknik Lingkungan, Kimia, dan sejenisnya.")
     
     st.markdown("""
@@ -44,4 +49,5 @@ if menu == "Beranda":
     st.info("💡 *Tips*: Gunakan menu di sidebar untuk menjelajahi fitur aplikasi ini.")
     st.markdown("---")
 
+    # Call to Action
     st.markdown("<h4 style='color: orange;'>Siap belajar? Ayo mulai sekarang 🚀</h4>", unsafe_allow_html=True)
