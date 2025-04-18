@@ -9,8 +9,26 @@ menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkul
 # CSS untuk styling
 st.markdown("""
     <style>
-        .title { font-size: 36px; color: #2c3e50; font-weight: bold; }
-        .subtitle { font-size: 24px; color: #34495e; }
+    .beranda-container {
+        background-color: #f0f9f4;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .beranda-title {
+        font-size: 36px;
+        color: #2e7d32;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .beranda-subtitle {
+        font-size: 20px;
+        color: #4caf50;
+        margin-bottom: 20px;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
