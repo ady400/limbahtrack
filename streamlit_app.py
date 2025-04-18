@@ -36,7 +36,7 @@ st.markdown("---")
 st.markdown("© 2025 EduWaste App | Dibuat untuk pembelajaran")
 
 # ---------- Halaman MATERI ----------
-elif menu == "Materi":
+elif menu = "Materi":
     st.subheader("📘 Materi Pembelajaran")
     st.info("Klik untuk membuka tiap topik 👇")
 
