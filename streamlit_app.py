@@ -88,4 +88,3 @@ elif menu == "Simulasi Pengolahan":
 
 # Halaman: Tentang Aplikasi
 elif menu == "Tentang Aplikasi":
- …zzz
