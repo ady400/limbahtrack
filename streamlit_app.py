@@ -1,4 +1,4 @@
-import streamlit as 
+streamlit as 
 
 Konfigurasi halaman
 
