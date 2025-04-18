@@ -15,7 +15,7 @@ st.markdown("""
 
 # Menu di sidebar
 with st.sidebar:
-    menu = option_menu(
+    menu = st.sidebar.selecbox(
         "Menu",
         ["Beranda", "Proses Pengolahan", "Kalkulator COD", "Tentang Aplikasi"],
         icons=["house", "gear", "calculator", "info-circle"],
