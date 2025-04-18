@@ -5,10 +5,10 @@ import plotly.express as px
 st.set_page_config(page_title="WasteVisual", layout="centered")
 st.title("WasteVisual: Visualisasi Data Limbah Industri")
 
-uploaded_file = st.file_uploader("Unggah file CSV berisi data limbah", type="csv")
+uploaded_file = st.file_uploader("Unggah file word berisi data limbah", type="word")
 
 if uploaded_file:
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_word(uploaded_file)
     st.subheader("Data Limbah yang Diupload:")
     st.dataframe(df)
 
