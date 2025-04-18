@@ -12,7 +12,7 @@ menu = st.sidebar.radio("📚 Pilih Halaman", ["Beranda", "Materi", "Kalkulator 
 # ---------- Halaman BERANDA ----------
 if menu == "Beranda":
    if menu == "Beranda":
-    st.markdown('<h3 style="color: red;"> Selamat Datang Mahasiswa politeknik AKA Bogor!</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 style="color: pear;"> Selamat Datang Mahasiswa politeknik AKA Bogor!</h3>', unsafe_allow_html=True)
     st.write("Aplikasi ini membantu kamu memahami dasar-dasar pengolahan limbah industri dengan cara yang interaktif.")
 # ---------- Halaman MATERI ----------
 elif menu == "Materi":
