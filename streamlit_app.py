@@ -1,53 +1,30 @@
 import streamlit as st
-from PIL import Image
 
-# Menu "Beranda"
-if menu == "Beranda":
-    # Styling Header (judul)
-    st.markdown("""
-        <style>
-            .title {
-                text-align: center; 
-                font-size: 36px; 
-                font-weight: bold;
-                color: #2E8B57;
-                margin-bottom: 10px;
-            }
-            .subtitle {
-                text-align: center;
-                font-size: 18px;
-                color: gray;
-            }
-        </style>
-        <div class='title'>🌿 Aplikasi Edukasi Limbah Industri</div>
-        <div class='subtitle'>Belajar lebih mudah, visual, dan menyenangkan!</div>
-    """, unsafe_allow_html=True)
+st.set_page_config(page_title="Aplikasi Edukasi Limbah Industri", layout="wide")
 
-    st.markdown("<br>", unsafe_allow_html=True)
+# Header
+st.markdown("""
+    <div style='text-align: center; padding: 20px 0;'>
+        <h1 style='color: #2E7D32;'>🌿 Selamat Datang di Aplikasi Edukasi Limbah Industri</h1>
+        <p style='font-size: 18px;'>Belajar pengolahan limbah industri jadi lebih mudah dan menyenangkan.</p>
+    </div>
+""", unsafe_allow_html=True)
 
-    # Memastikan gambar ada di folder assets/
-    img_path = "assets/beranda_canva.png"
-    if os.path.exists(img_path):
-        img = Image.open(img_path)
-        st.image(img, use_container_width=True)
-    else:
-        st.error("Gambar tidak ditemukan di folder 'assets/'")
+# Gambar Utama
+st.image("https://cdn-icons-png.flaticon.com/512/3815/3815447.png", width=150)
 
-    st.markdown("---")
+# Info Box
+with st.container():
+    st.success("✅ Aplikasi ini dirancang untuk mahasiswa Teknik Lingkungan dan sejenisnya.")
 
-    # Info Box
-    st.success("👋 Selamat datang! Aplikasi ini cocok untuk mahasiswa Teknik Lingkungan, Kimia, dan sejenisnya.")
-    
-    st.markdown("""
-    ### 📌 Fitur Utama:
-    - 📚 **Materi Edukatif** tentang pengolahan limbah industri
-    - 🧮 **Kalkulator COD** untuk praktikum laboratorium
-    - 📤 **Upload Laporan** langsung dari aplikasi
-    - 📞 **Kontak Admin** jika kamu butuh bantuan
-    """)
+# Tips Section
+st.markdown("### 📌 Tips Menggunakan Aplikasi Ini:")
+st.markdown("""
+- Navigasikan materi melalui sidebar ⬅️  
+- Gunakan *Kalkulator COD* untuk bantu hitung parameter laboratorium  
+- Ikuti urutan pembelajaran secara bertahap
+""")
 
-    st.info("💡 *Tips*: Gunakan menu di sidebar untuk menjelajahi fitur aplikasi ini.")
-    st.markdown("---")
-
-    # Call to Action
-    st.markdown("<h4 style='color: orange;'>Siap belajar? Ayo mulai sekarang 🚀</h4>", unsafe_allow_html=True)
+# Optional: Tambah menu lainnya atau link ke halaman lain
+st.markdown("---")
+st.markdown("© 2025 EduWaste App | Dibuat untuk pembelajaran")
