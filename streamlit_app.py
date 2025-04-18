@@ -20,7 +20,7 @@ if menu == "Beranda":
     st.write("""
         Aplikasi ini memberikan edukasi seputar proses pengolahan limbah industri serta kalkulator simulasi pengujian laboratorium.
         Cocok digunakan oleh mahasiswa, peneliti, maupun praktisi di bidang lingkungan.
-    """)
+    """,unsafe_allow_html=True)
 
 # Halaman: Proses Pengolahan
 elif menu == "Proses Pengolahan":
