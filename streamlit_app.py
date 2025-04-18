@@ -6,7 +6,7 @@ st.set_page_config(page_title="Aplikasi Limbah Industri", layout="wide")
 # Sidebar Navigasi
 menu = st.sidebar.selectbox("Navigasi", ["Beranda", "Proses Pengolahan", "Kalkulator Uji Lab", "Simulasi Pengolahan", "Tentang Aplikasi"])
 
-# CSS untuk styling
+# CSS Custom
 st.markdown("""
     <style>
     .beranda-container {
