@@ -9,26 +9,12 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 # BERANDA
 if menu == "Beranda":
     st.markdown('<div class="main-title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    _LOREM_IPSUM = """
-Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif.
-
-"""
-
+    _LOREM_IPSUM = """Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif."""
 
 def stream_data():
     for word in _LOREM_IPSUM.split(" "):
         yield word + " "
         time.sleep(0.02)
-
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
-
-    for word in _LOREM_IPSUM.split(" "):
-        yield word + " "
-        time.sleep(0.02)
-
 
 if st.button("Stream data"):
     st.write_stream(stream_data)
