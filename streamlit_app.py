@@ -7,7 +7,7 @@ import streamlit as st
 st.set_page_config(page_title="Limbah Industri", layout="wide")
 
 # Navigasi Sidebar 
-menu = st.sidebar.radio("Menu", ["🏠Beranda", "⚙️Proses", "🧪Uji Lab", "🔄Simulasi", "ℹ️Tentang"])
+menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
 
     
 # BERANDA
