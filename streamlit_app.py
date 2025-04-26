@@ -33,7 +33,7 @@ elif menu == "Proses":
 # KALKULATOR LAB
 elif menu == "Uji Lab":
     st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
-    uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD", "TSS", "pH"])
+    uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD"])
 
     if uji == "COD":
         v = st.number_input("Volume titran (mL)", value=10.0)
