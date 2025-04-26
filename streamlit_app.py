@@ -6,19 +6,12 @@ import streamlit as st
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Industri", layout="wide")
 
-# Navigasi Sidebar dengan ikon emoji
-menu = st.sidebar.radio(
-    "Menu",
-    [
-        "🏠 Beranda",
-        "⚙️ Proses",
-        "🧪 Uji Lab",
-        "🔄 Simulasi",
-        "ℹ️ Tentang"
-    ]
+# Navigasi Sidebar 
+menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
+
     
 # BERANDA
-if menu == "🏠Beranda":
+if menu == "Beranda":
     st.markdown("""
     <div style='text-align: center; padding: 30px 0;'>
         <h1 style='color:#2C3E50;'>Aplikasi Pengolahan Limbah Industri</h1>
@@ -42,7 +35,7 @@ if menu == "🏠Beranda":
     
 # PROSES
 # PROSES
-if menu == "⚙️ Proses":
+if menu == "Proses":
     st.markdown('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
     ### 🧹 1. Pra-Pengolahan (Pre-Treatment)
@@ -71,7 +64,7 @@ if menu == "⚙️ Proses":
     - Air hasil olahan yang memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali untuk keperluan industri atau pertanian.
     """)
 # KALKULATOR LAB
-elif menu == "🧪Uji Lab":
+elif menu == "Uji Lab":
     st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
     uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD", "TSS", "pH"])
 
@@ -103,7 +96,7 @@ elif menu == "🧪Uji Lab":
         st.info(f"pH = {ph}")
 
 # SIMULASI
-elif menu == "🔄Simulasi":
+elif menu == "Simulasi":
     st.markdown('<div class="main-title">Simulasi Pengolahan</div>', unsafe_allow_html=True)
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
@@ -114,7 +107,7 @@ elif menu == "🔄Simulasi":
         st.success(f"Hasil akhir: {akhir:.2f} mg/L ({efisiensi*100:.0f}% efisiensi)")
 
 # TENTANG
-elif menu == "ℹ️Tentang":
+elif menu == "Tentang":
     st.markdown('<div class="main-title">Tentang Aplikasi</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
