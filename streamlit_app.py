@@ -32,18 +32,6 @@ if menu == "Beranda":
             width: 22%;
             box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
         }
-        .param h3 {
-            margin: 10px 0 5px;
-        }
-        .quick-links a {
-            display: inline-block;
-            margin-right: 15px;
-            padding: 10px 15px;
-            background: #00796b;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-        }
     </style>
 
     <div class="main-card">
@@ -61,21 +49,11 @@ if menu == "Beranda":
             </div>
             <div class="param">
                 <h3>pH</h3>
-                <p>Tingkat keasaman</p>
+                <p>Tingkat Keasaman</p>
             </div>
             <div class="param">
                 <h3>TSS</h3>
                 <p>Total Suspended Solids</p>
-            </div>
-        </div>
-
-        <div style="margin-top: 30px;">
-            <h4>Mulai Jelajahi:</h4>
-            <div class="quick-links">
-                <a href="#Proses">Proses</a>
-                <a href="#Uji Lab">Uji Lab</a>
-                <a href="#Simulasi">Simulasi</a>
-                <a href="#Tentang">Tentang</a>
             </div>
         </div>
     </div>
