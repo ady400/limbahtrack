@@ -17,7 +17,7 @@ if menu == "Beranda":
 # PROSES
 elif menu == "Proses":
     st.markdown("""
-<div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>
+st.title ('<div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>')
 <p>Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:</p>
 <ul>
   <li><b>Screening:</b> Menyaring benda kasar</li>
