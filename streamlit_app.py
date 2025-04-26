@@ -19,15 +19,6 @@ st.markdown("""
         }
         
     </style>
-""", unsafe_allow_html=True)
-
-# Styling sederhana
-st.markdown("""
-    <style>
-        .main-title { font-size: 30px; color: #2c3e50; font-weight: bold; }
-        .section-title { font-size: 22px; color: #34495e; margin-top: 20px; }
-    </style>
-""", unsafe_allow_html=True)
 
 # BERANDA
 if menu == "Beranda":
