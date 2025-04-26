@@ -14,7 +14,7 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 if menu == "Beranda":
     st.markdown("""
     <div style='text-align: center; padding: 30px 0;'>
-        <h1 style='color:#2C3E50;'>Aplikasi Pengolahan Limbah Industri</h1>
+        <h1 style='color:#2C3E50;'>♻️Aplikasi Pengolahan Limbah Industri</h1>
         <p style='font-size:18px; color:#555;'>Belajar dan simulasi proses pengolahan limbah industri secara interaktif dan edukatif</p>
     </div>
     """, unsafe_allow_html=True)
@@ -65,7 +65,7 @@ if menu == "Proses":
     """)
 # KALKULATOR LAB
 elif menu == "Uji Lab":
-    st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">🧪Kalkulator Uji Lab</div>', unsafe_allow_html=True)
     uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD", "TSS", "pH"])
 
     if uji == "COD":
@@ -97,7 +97,7 @@ elif menu == "Uji Lab":
 
 # SIMULASI
 elif menu == "Simulasi":
-    st.markdown('<div class="main-title">Simulasi Pengolahan</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">🔄Simulasi Pengolahan</div>', unsafe_allow_html=True)
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
 
@@ -108,7 +108,7 @@ elif menu == "Simulasi":
 
 # TENTANG
 elif menu == "Tentang":
-    st.markdown('<div class="main-title">Tentang Aplikasi</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">ℹ️Tentang Aplikasi</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
 
