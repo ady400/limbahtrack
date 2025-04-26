@@ -49,6 +49,7 @@ elif menu == "Uji Lab":
         if st.button("Hitung"):
             hasil = awal - akhir
             st.success(f"BOD = {hasil:.2f} mg/L")
+            
     elif opsi == "TSS":
         berat_filter_awal = st.number_input("Berat filter awal (mg)", 0.0, 1000.0, 100.0)
         berat_filter_akhir = st.number_input("Berat filter akhir (mg)", 0.0, 1000.0, 120.0)
