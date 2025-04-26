@@ -12,28 +12,26 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 # BERANDA
 if menu == "Beranda":
     st.markdown("""
-    <style>
-        .main-card {
-            background-color: #e0f7fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        }
-        .parameter-box {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .param {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            width: 22%;
-            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-        }
-    </style>
+    <div style='text-align: center; padding: 30px 0;'>
+        <h1 style='color:#2C3E50;'>Aplikasi Pengolahan Limbah Industri</h1>
+        <p style='font-size:18px; color:#555;'>Belajar dan simulasi proses pengolahan limbah industri secara interaktif dan edukatif</p>
+    </div>
     """, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("https://cdn-icons-png.flaticon.com/512/1866/1866365.png", width=80)
+        st.markdown("### Edukasi Proses")
+        st.write("Kenali tahapan pengolahan limbah dari awal hingga akhir.")
+    with col2:
+        st.image("https://cdn-icons-png.flaticon.com/512/3135/3135823.png", width=80)
+        st.markdown("### Uji Laboratorium")
+        st.write("Hitung nilai COD, BOD, TSS, dan pH dari data sampel.")
+    with col3:
+        st.image("https://cdn-icons-png.flaticon.com/512/2933/2933820.png", width=80)
+        st.markdown("### Simulasi Interaktif")
+        st.write("Lakukan simulasi pengolahan limbah dengan berbagai jenis.")
+    
 # PROSES
 elif menu == "Proses":
     st.markdown("""
