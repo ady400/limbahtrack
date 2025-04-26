@@ -9,7 +9,6 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 # BERANDA
 if menu == "Beranda":
     st.markdown('<div class="main-title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
-    st.image
     st.write("Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif.")
 
 # PROSES
