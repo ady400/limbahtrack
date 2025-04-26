@@ -6,6 +6,25 @@ st.set_page_config(page_title="Limbah Industri", layout="wide")
 # Navigasi Sidebar
 menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
 
+# Background image styling
+st.markdown("""
+    <style>
+        .stApp {
+            background-image: url(https://images.app.goo.gl/vC2jo8PSXZPfjRh69);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Optional: Tambah background semi-transparan untuk konten */
+        .block-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Styling sederhana
 st.markdown("""
     <style>
@@ -17,6 +36,7 @@ st.markdown("""
 # BERANDA
 if menu == "Beranda":
     st.markdown('<div class="main-title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.image
     st.write("Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif.")
 
 # PROSES
