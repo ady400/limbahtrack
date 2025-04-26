@@ -21,37 +21,46 @@ if menu == "Beranda":
 
 # PROSES
 elif menu == "Proses":
-    st.markdown('<div class="main-title">Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
 <div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>
-"Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:"
-- **Screening:** Menyaring benda kasar
-- **Grit Chamber:** Mengendapkan partikel berat seperti pasir
-- **Equalization Tank:** Menyeimbangkan aliran dan beban limbah
+<p>Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:</p>
+<ul>
+  <li><b>Screening:</b> Menyaring benda kasar</li>
+  <li><b>Grit Chamber:</b> Mengendapkan partikel berat seperti pasir</li>
+  <li><b>Equalization Tank:</b> Menyeimbangkan aliran dan beban limbah</li>
+</ul>
 
 <div class="section-title">2. Pengolahan Primer</div>
-"Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai:"
-- **Primary Clarifier:** Tangki pengendapan yang memisahkan lumpur dari cairan limbah
+<p>Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai <b>primary sludge</b>.</p>
+<ul>
+  <li><b>Primary Clarifier:</b> Tangki pengendapan yang memisahkan lumpur dari cairan limbah</li>
+</ul>
 
 <div class="section-title">3. Pengolahan Sekunder (Biologis)</div>
-"Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme:"
-- **Proses Aerob:** Menggunakan oksigen (misalnya activated sludge, trickling filter)
-- **Proses Anaerob:** Tanpa oksigen, sering digunakan untuk lumpur atau limbah berkonsentrasi tinggi
+<p>Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme.</p>
+<ul>
+  <li><b>Proses Aerob:</b> Menggunakan oksigen (misalnya activated sludge, trickling filter)</li>
+  <li><b>Proses Anaerob:</b> Tanpa oksigen, sering digunakan untuk lumpur atau limbah berkonsentrasi tinggi</li>
+</ul>
 
 <div class="section-title">4. Pengolahan Tersier (Lanjutan)</div>
-"Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia:"
-- **Filtrasi Pasir, Karbon Aktif**
-- **Reverse Osmosis (RO)**
-- **Proses Kimia:** Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV)
+<p>Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia.</p>
+<ul>
+  <li>Filtrasi Pasir, Karbon Aktif</li>
+  <li>Reverse Osmosis (RO)</li>
+  <li>Proses Kimia: Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV)</li>
+</ul>
 
 <div class="section-title">5. Pengolahan Lumpur (Sludge Treatment)</div>
-"Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan:"
-- **Thickening, Dewatering**
-- **Digestion:** Proses biologis untuk mengurangi volume dan stabilisasi
-- **Pengeringan dan Pembakaran (jika perlu)**
+<p>Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan.</p>
+<ul>
+  <li>Thickening, Dewatering</li>
+  <li>Digestion: Proses biologis untuk mengurangi volume dan stabilisasi</li>
+  <li>Pengeringan dan Pembakaran (jika perlu)</li>
+</ul>
 
 <div class="section-title">6. Pembuangan Akhir</div>
-Air hasil olahan yang telah memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali (reuse) untuk keperluan industri atau pertanian.
+<p>Air hasil olahan yang telah memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali (reuse) untuk keperluan industri atau pertanian.</p>
 """, unsafe_allow_html=True)
 # KALKULATOR LAB
 elif menu == "Uji Lab":
