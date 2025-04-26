@@ -106,8 +106,8 @@ elif menu == "Tentang":
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
 
-    - *Teknologi:* Python + Streamlit  
-    - *Pengembang:* [Nama Anda]  
-    - *Versi:* 1.0  
-    - *Sumber:* Modul Teknik Lingkungan, Litbang KLHK
+    - Teknologi: Python + Streamlit  
+    - Pengembang: Kelompok 6 1F PLI AKA  
+    - Versi: 1.0  
+    - Sumber: Modul Teknik Lingkungan, Litbang KLHK
     """)
