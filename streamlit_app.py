@@ -17,6 +17,7 @@ st.markdown("""
 # BERANDA
 if menu == "Beranda":
     st.markdown('<div class="main-title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.image("https://images.unsplash.com/photo-1600691962274-d2f71c82b9cd", use_column_width=True)
     st.write("Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif.")
 
 # PROSES
@@ -49,18 +50,18 @@ elif menu == "Uji Lab":
         if st.button("Hitung"):
             hasil = awal - akhir
             st.success(f"BOD = {hasil:.2f} mg/L")
-            
-    elif opsi == "TSS":
-        berat_filter_awal = st.number_input("Berat filter awal (mg)", 0.0, 1000.0, 100.0)
-        berat_filter_akhir = st.number_input("Berat filter akhir (mg)", 0.0, 1000.0, 120.0)
-        volume_air = st.number_input("Volume sampel (L)", 0.1, 10.0, 1.0)
-        if st.button("Hitung TSS"):
-            TSS = (berat_filter_akhir - berat_filter_awal) / volume_air
-            st.success(f"Hasil TSS: {TSS:.2f} mg/L")
 
-    elif opsi == "pH":
-        ph_val = st.slider("Masukkan nilai pH", 0.0, 14.0, 7.0)
-        st.info(f"Nilai pH sampel adalah {ph_val}")
+    elif uji == "TSS":
+        awal = st.number_input("Berat filter awal (mg)", value=100.0)
+        akhir = st.number_input("Berat filter akhir (mg)", value=120.0)
+        volume = st.number_input("Volume sampel (L)", value=1.0)
+        if st.button("Hitung"):
+            hasil = (akhir - awal) / volume
+            st.success(f"TSS = {hasil:.2f} mg/L")
+
+    elif uji == "pH":
+        ph = st.slider("pH sampel", 0.0, 14.0, 7.0)
+        st.info(f"pH = {ph}")
 
 # SIMULASI
 elif menu == "Simulasi":
@@ -82,5 +83,5 @@ elif menu == "Tentang":
     - *Teknologi:* Python + Streamlit  
     - *Pengembang:* [Nama Anda]  
     - *Versi:* 1.0  
-    - *Sumber:* Modul Teknik Lingkungan, Litbang KLHK
-    """)
+    - *Sumber:* Modul Teknik Lingkungan, Litbang KLHK
+    """)
