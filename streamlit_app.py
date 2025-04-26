@@ -49,6 +49,18 @@ elif menu == "Uji Lab":
         if st.button("Hitung"):
             hasil = awal - akhir
             st.success(f"BOD = {hasil:.2f} mg/L")
+    elif opsi == "TSS":
+        berat_filter_awal = st.number_input("Berat filter awal (mg)", 0.0, 1000.0, 100.0)
+        berat_filter_akhir = st.number_input("Berat filter akhir (mg)", 0.0, 1000.0, 120.0)
+        volume_air = st.number_input("Volume sampel (L)", 0.1, 10.0, 1.0)
+        if st.button("Hitung TSS"):
+            TSS = (berat_filter_akhir - berat_filter_awal) / volume_air
+            st.success(f"Hasil TSS: {TSS:.2f} mg/L")
+
+    elif opsi == "pH":
+        ph_val = st.slider("Masukkan nilai pH", 0.0, 14.0, 7.0)
+        st.info(f"Nilai pH sampel adalah {ph_val}")
+
 # SIMULASI
 elif menu == "Simulasi":
     st.markdown('<div class="main-title">Simulasi Pengolahan</div>', unsafe_allow_html=True)
