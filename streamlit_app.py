@@ -35,38 +35,38 @@ if menu == "Beranda":
 # PROSES
 elif menu == "Proses":
     st.markdown("<h2 style='color:#2C3E50;'>Tahapan Pengolahan Limbah Industri</h2>", unsafe_allow_html=True)
-    st.markdown("Pelajari setiap tahap penting dalam pengolahan limbah dengan ringkas dan jelas.")
+    st.markdown("Pelajari ringkasan tiap tahap proses secara visual.")
 
     tahap_list = [
         {
-            "judul": "1. Pra-Pengolahan",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/252/252035.png",
-            "deskripsi": "Menghilangkan benda padat kasar dan partikel berat (screening, grit chamber, equalization)."
+            "judul": "Pra-Pengolahan",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/10761/10761283.png",
+            "deskripsi": "Pemisahan benda kasar dan partikel berat menggunakan screening, grit chamber, dan equalization tank."
         },
         {
-            "judul": "2. Pengolahan Primer",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/4812/4812934.png",
-            "deskripsi": "Pengendapan awal untuk memisahkan padatan tersuspensi menjadi lumpur (primary clarifier)."
+            "judul": "Pengolahan Primer",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+            "deskripsi": "Pengendapan awal untuk menghilangkan padatan tersuspensi dan menghasilkan primary sludge."
         },
         {
-            "judul": "3. Pengolahan Sekunder",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/3303/3303890.png",
-            "deskripsi": "Menggunakan mikroorganisme untuk mengurai bahan organik secara aerob dan anaerob."
+            "judul": "Pengolahan Sekunder",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
+            "deskripsi": "Pengolahan biologis menggunakan mikroorganisme (aerob dan anaerob) untuk menguraikan bahan organik."
         },
         {
-            "judul": "4. Pengolahan Tersier",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/1610/1610941.png",
-            "deskripsi": "Tahapan lanjutan seperti filtrasi, RO, dan disinfeksi untuk hasil air yang lebih bersih."
+            "judul": "Pengolahan Tersier",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/2917/2917991.png",
+            "deskripsi": "Menghilangkan kontaminan sisa seperti nutrien dan logam berat melalui filtrasi dan proses kimia."
         },
         {
-            "judul": "5. Pengolahan Lumpur",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/3004/3004458.png",
-            "deskripsi": "Mengolah lumpur dari proses sebelumnya dengan thickening, dewatering, dan digesting."
+            "judul": "Pengolahan Lumpur",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/9799/9799171.png",
+            "deskripsi": "Mengurangi volume dan menstabilkan lumpur melalui thickening, dewatering, dan digestion."
         },
         {
-            "judul": "6. Pembuangan Akhir",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/3050/3050525.png",
-            "deskripsi": "Air hasil olahan dibuang ke badan air atau digunakan kembali (reuse)."
+            "judul": "Pembuangan Akhir",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/7443/7443442.png",
+            "deskripsi": "Air olahan dibuang ke lingkungan atau dimanfaatkan kembali untuk irigasi dan industri."
         }
     ]
 
@@ -76,7 +76,7 @@ elif menu == "Proses":
             if i + j < len(tahap_list):
                 tahap = tahap_list[i + j]
                 with col:
-                    st.image(tahap["ikon"], width=60)
+                    st.image(tahap["ikon"], width=50)
                     st.markdown(f"#### {tahap['judul']}")
                     st.write(tahap["deskripsi"])
 # KALKULATOR LAB
