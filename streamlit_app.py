@@ -6,11 +6,19 @@ import streamlit as st
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Industri", layout="wide")
 
-# Navigasi Sidebar
-menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
-
+# Navigasi Sidebar dengan ikon emoji
+menu = st.sidebar.radio(
+    "Menu",
+    [
+        "🏠 Beranda",
+        "⚙️ Proses",
+        "🧪 Uji Lab",
+        "🔄 Simulasi",
+        "ℹ️ Tentang"
+    ]
+    
 # BERANDA
-if menu == "Beranda":
+if menu == "🏠Beranda":
     st.markdown("""
     <div style='text-align: center; padding: 30px 0;'>
         <h1 style='color:#2C3E50;'>Aplikasi Pengolahan Limbah Industri</h1>
@@ -33,54 +41,37 @@ if menu == "Beranda":
         st.write("Lakukan simulasi pengolahan limbah dengan berbagai jenis.")
     
 # PROSES
-elif menu == "Proses":
-    st.markdown("<h2 style='color:#2C3E50;'>Tahapan Pengolahan Limbah Industri</h2>", unsafe_allow_html=True)
-    st.markdown("Pelajari ringkasan tiap tahap proses secara visual.")
+# PROSES
+if menu == "⚙️ Proses":
+    st.markdown('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.markdown("""
+    ### 🧹 1. Pra-Pengolahan (Pre-Treatment)
+    - *Screening:* Menyaring benda kasar seperti plastik dan kayu.
+    - *Grit Chamber:* Mengendapkan partikel berat seperti pasir.
+    - *Equalization Tank:* Menyeimbangkan aliran dan beban limbah.
 
-    tahap_list = [
-        {
-            "judul": "Pra-Pengolahan",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/10761/10761283.png",
-            "deskripsi": "Pemisahan benda kasar dan partikel berat menggunakan screening, grit chamber, dan equalization tank."
-        },
-        {
-            "judul": "Pengolahan Primer",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
-            "deskripsi": "Pengendapan awal untuk menghilangkan padatan tersuspensi dan menghasilkan primary sludge."
-        },
-        {
-            "judul": "Pengolahan Sekunder",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
-            "deskripsi": "Pengolahan biologis menggunakan mikroorganisme (aerob dan anaerob) untuk menguraikan bahan organik."
-        },
-        {
-            "judul": "Pengolahan Tersier",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/2917/2917991.png",
-            "deskripsi": "Menghilangkan kontaminan sisa seperti nutrien dan logam berat melalui filtrasi dan proses kimia."
-        },
-        {
-            "judul": "Pengolahan Lumpur",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/9799/9799171.png",
-            "deskripsi": "Mengurangi volume dan menstabilkan lumpur melalui thickening, dewatering, dan digestion."
-        },
-        {
-            "judul": "Pembuangan Akhir",
-            "ikon": "https://cdn-icons-png.flaticon.com/512/7443/7443442.png",
-            "deskripsi": "Air olahan dibuang ke lingkungan atau dimanfaatkan kembali untuk irigasi dan industri."
-        }
-    ]
+    ### 🧪 2. Pengolahan Primer
+    - *Primary Clarifier:* Mengendapkan padatan tersuspensi untuk menghasilkan primary sludge.
 
-    for i in range(0, len(tahap_list), 2):
-        col1, col2 = st.columns(2)
-        for j, col in enumerate([col1, col2]):
-            if i + j < len(tahap_list):
-                tahap = tahap_list[i + j]
-                with col:
-                    st.image(tahap["ikon"], width=50)
-                    st.markdown(f"#### {tahap['judul']}")
-                    st.write(tahap["deskripsi"])
+    ### 🧬 3. Pengolahan Sekunder (Biologis)
+    - *Proses Aerob:* Menggunakan oksigen (misalnya activated sludge, trickling filter).
+    - *Proses Anaerob:* Tanpa oksigen, digunakan untuk limbah berkonsentrasi tinggi.
+
+    ### 🧼 4. Pengolahan Tersier (Lanjutan)
+    - *Filtrasi:* Menggunakan pasir atau karbon aktif.
+    - *Reverse Osmosis (RO):* Memisahkan kontaminan tersisa.
+    - *Proses Kimia:* Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV).
+
+    ### 🧱 5. Pengolahan Lumpur (Sludge Treatment)
+    - *Thickening dan Dewatering:* Mengurangi volume lumpur.
+    - *Digestion:* Proses biologis untuk stabilisasi lumpur.
+    - *Pengeringan dan Pembakaran:* Jika diperlukan.
+
+    ### 🌊 6. Pembuangan Akhir
+    - Air hasil olahan yang memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali untuk keperluan industri atau pertanian.
+    """)
 # KALKULATOR LAB
-elif menu == "Uji Lab":
+elif menu == "🧪Uji Lab":
     st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
     uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD", "TSS", "pH"])
 
@@ -112,7 +103,7 @@ elif menu == "Uji Lab":
         st.info(f"pH = {ph}")
 
 # SIMULASI
-elif menu == "Simulasi":
+elif menu == "🔄Simulasi":
     st.markdown('<div class="main-title">Simulasi Pengolahan</div>', unsafe_allow_html=True)
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
@@ -123,7 +114,7 @@ elif menu == "Simulasi":
         st.success(f"Hasil akhir: {akhir:.2f} mg/L ({efisiensi*100:.0f}% efisiensi)")
 
 # TENTANG
-elif menu == "Tentang":
+elif menu == "ℹ️Tentang":
     st.markdown('<div class="main-title">Tentang Aplikasi</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
