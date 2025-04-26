@@ -14,7 +14,7 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 if menu == "Beranda":
     st.markdown("""
     <div style='text-align: center; padding: 30px 0;'>
-        <h1 style='color:#2C3E50;'>♻️Pengolahan Limbah Industri♻️</h1>
+        <h1 style='color:#2C3E50;'>♻️Aplikasi Pengolahan Limbah Industri♻️</h1>
         <p style='font-size:18px; color:#555;'>Belajar dan simulasi proses pengolahan limbah industri secara interaktif dan edukatif</p>
     </div>
     """, unsafe_allow_html=True)
