@@ -33,30 +33,6 @@ if menu == "Beranda":
             box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
         }
     </style>
-
-    <div class="main-card">
-        <h1>Selamat Datang di Aplikasi Pengolahan Limbah Industri</h1>
-        <p>Aplikasi edukatif interaktif untuk memahami proses pengolahan limbah industri dan melakukan simulasi serta pengujian parameter BOD, COD, pH, dan TSS.</p>
-
-        <div class="parameter-box">
-            <div class="param">
-                <h3>BOD</h3>
-                <p>Biological Oxygen Demand</p>
-            </div>
-            <div class="param">
-                <h3>COD</h3>
-                <p>Chemical Oxygen Demand</p>
-            </div>
-            <div class="param">
-                <h3>pH</h3>
-                <p>Tingkat Keasaman</p>
-            </div>
-            <div class="param">
-                <h3>TSS</h3>
-                <p>Total Suspended Solids</p>
-            </div>
-        </div>
-    </div>
     """, unsafe_allow_html=True)
 # PROSES
 elif menu == "Proses":
