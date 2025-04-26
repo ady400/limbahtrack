@@ -34,47 +34,51 @@ if menu == "Beranda":
     
 # PROSES
 elif menu == "Proses":
-    st.markdown("""
-<div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>
-<p>Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:</p>
-<ul>
-  <li><b>Screening:</b> Menyaring benda kasar</li>
-  <li><b>Grit Chamber:</b> Mengendapkan partikel berat seperti pasir</li>
-  <li><b>Equalization Tank:</b> Menyeimbangkan aliran dan beban limbah</li>
-</ul>
+    st.markdown("<h2 style='color:#2C3E50;'>Tahapan Pengolahan Limbah Industri</h2>", unsafe_allow_html=True)
+    st.markdown("Pelajari setiap tahap penting dalam pengolahan limbah dengan ringkas dan jelas.")
 
-<div class="section-title">2. Pengolahan Primer</div>
-<p>Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai <b>primary sludge</b>.</p>
-<ul>
-  <li><b>Primary Clarifier:</b> Tangki pengendapan yang memisahkan lumpur dari cairan limbah</li>
-</ul>
+    tahap_list = [
+        {
+            "judul": "1. Pra-Pengolahan",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/252/252035.png",
+            "deskripsi": "Menghilangkan benda padat kasar dan partikel berat (screening, grit chamber, equalization)."
+        },
+        {
+            "judul": "2. Pengolahan Primer",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/4812/4812934.png",
+            "deskripsi": "Pengendapan awal untuk memisahkan padatan tersuspensi menjadi lumpur (primary clarifier)."
+        },
+        {
+            "judul": "3. Pengolahan Sekunder",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/3303/3303890.png",
+            "deskripsi": "Menggunakan mikroorganisme untuk mengurai bahan organik secara aerob dan anaerob."
+        },
+        {
+            "judul": "4. Pengolahan Tersier",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/1610/1610941.png",
+            "deskripsi": "Tahapan lanjutan seperti filtrasi, RO, dan disinfeksi untuk hasil air yang lebih bersih."
+        },
+        {
+            "judul": "5. Pengolahan Lumpur",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/3004/3004458.png",
+            "deskripsi": "Mengolah lumpur dari proses sebelumnya dengan thickening, dewatering, dan digesting."
+        },
+        {
+            "judul": "6. Pembuangan Akhir",
+            "ikon": "https://cdn-icons-png.flaticon.com/512/3050/3050525.png",
+            "deskripsi": "Air hasil olahan dibuang ke badan air atau digunakan kembali (reuse)."
+        }
+    ]
 
-<div class="section-title">3. Pengolahan Sekunder (Biologis)</div>
-<p>Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme.</p>
-<ul>
-  <li><b>Proses Aerob:</b> Menggunakan oksigen (misalnya activated sludge, trickling filter)</li>
-  <li><b>Proses Anaerob:</b> Tanpa oksigen, sering digunakan untuk lumpur atau limbah berkonsentrasi tinggi</li>
-</ul>
-
-<div class="section-title">4. Pengolahan Tersier (Lanjutan)</div>
-<p>Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia.</p>
-<ul>
-  <li>Filtrasi Pasir, Karbon Aktif</li>
-  <li>Reverse Osmosis (RO)</li>
-  <li>Proses Kimia: Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV)</li>
-</ul>
-
-<div class="section-title">5. Pengolahan Lumpur (Sludge Treatment)</div>
-<p>Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan.</p>
-<ul>
-  <li>Thickening, Dewatering</li>
-  <li>Digestion: Proses biologis untuk mengurangi volume dan stabilisasi</li>
-  <li>Pengeringan dan Pembakaran (jika perlu)</li>
-</ul>
-
-<div class="section-title">6. Pembuangan Akhir</div>
-<p>Air hasil olahan yang telah memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali (reuse) untuk keperluan industri atau pertanian.</p>
-""", unsafe_allow_html=True)
+    for i in range(0, len(tahap_list), 2):
+        col1, col2 = st.columns(2)
+        for j, col in enumerate([col1, col2]):
+            if i + j < len(tahap_list):
+                tahap = tahap_list[i + j]
+                with col:
+                    st.image(tahap["ikon"], width=60)
+                    st.markdown(f"#### {tahap['judul']}")
+                    st.write(tahap["deskripsi"])
 # KALKULATOR LAB
 elif menu == "Uji Lab":
     st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
