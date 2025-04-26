@@ -24,28 +24,28 @@ elif menu == "Proses":
     st.markdown('<div class="main-title">Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
 <div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>
-Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:
+"Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:"
 - **Screening:** Menyaring benda kasar
 - **Grit Chamber:** Mengendapkan partikel berat seperti pasir
 - **Equalization Tank:** Menyeimbangkan aliran dan beban limbah
 
 <div class="section-title">2. Pengolahan Primer</div>
-Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai **primary sludge**.
+"Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai:"
 - **Primary Clarifier:** Tangki pengendapan yang memisahkan lumpur dari cairan limbah
 
 <div class="section-title">3. Pengolahan Sekunder (Biologis)</div>
-Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme.
+"Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme:"
 - **Proses Aerob:** Menggunakan oksigen (misalnya activated sludge, trickling filter)
 - **Proses Anaerob:** Tanpa oksigen, sering digunakan untuk lumpur atau limbah berkonsentrasi tinggi
 
 <div class="section-title">4. Pengolahan Tersier (Lanjutan)</div>
-Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia.
+"Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia:"
 - **Filtrasi Pasir, Karbon Aktif**
 - **Reverse Osmosis (RO)**
 - **Proses Kimia:** Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV)
 
 <div class="section-title">5. Pengolahan Lumpur (Sludge Treatment)</div>
-Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan.
+"Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan:"
 - **Thickening, Dewatering**
 - **Digestion:** Proses biologis untuk mengurangi volume dan stabilisasi
 - **Pengeringan dan Pembakaran (jika perlu)**
