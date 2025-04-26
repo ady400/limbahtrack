@@ -11,9 +11,75 @@ menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Te
 
 # BERANDA
 if menu == "Beranda":
-    st.title('Aplikasi Pengolahan Limbah Industri')
-    st.write("Aplikasi ini dirancang untuk membantu memahami dan mensimulasikan pengolahan limbah industri secara sederhana dan interaktif.")
+    st.markdown("""
+    <style>
+        .main-card {
+            background-color: #e0f7fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .parameter-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .param {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 22%;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+        }
+        .param h3 {
+            margin: 10px 0 5px;
+        }
+        .quick-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 15px;
+            background: #00796b;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
 
+    <div class="main-card">
+        <h1>Selamat Datang di Aplikasi Pengolahan Limbah Industri</h1>
+        <p>Aplikasi edukatif interaktif untuk memahami proses pengolahan limbah industri dan melakukan simulasi serta pengujian parameter BOD, COD, pH, dan TSS.</p>
+
+        <div class="parameter-box">
+            <div class="param">
+                <h3>BOD</h3>
+                <p>Biological Oxygen Demand</p>
+            </div>
+            <div class="param">
+                <h3>COD</h3>
+                <p>Chemical Oxygen Demand</p>
+            </div>
+            <div class="param">
+                <h3>pH</h3>
+                <p>Tingkat keasaman</p>
+            </div>
+            <div class="param">
+                <h3>TSS</h3>
+                <p>Total Suspended Solids</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h4>Mulai Jelajahi:</h4>
+            <div class="quick-links">
+                <a href="#Proses">Proses</a>
+                <a href="#Uji Lab">Uji Lab</a>
+                <a href="#Simulasi">Simulasi</a>
+                <a href="#Tentang">Tentang</a>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 # PROSES
 elif menu == "Proses":
     st.markdown("""
