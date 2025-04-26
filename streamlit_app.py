@@ -21,53 +21,38 @@ if menu == "Beranda":
 
 # PROSES
 elif menu == "Proses":
-    st.markdown('<div class="main-title">Tahapan Pengolahan Limbah</div>', unsafe_allow_html=True)
-
-    st.markdown("## 1. Pra-pengolahan")
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bar_Screen.png/640px-Bar_Screen.png", caption="Contoh bar screen untuk menyaring partikel kasar")
+    st.markdown('<div class="main-title">Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
-    Tahap ini bertujuan untuk menyaring partikel besar seperti plastik, kayu, dan pasir dari air limbah.
-    Alat yang digunakan: *bar screen, **grit chamber*.
-    """)
+<div class="section-title">1. Pra-Pengolahan (Pre-Treatment)</div>
+Pada tahap ini, limbah disaring untuk menghilangkan benda padat besar seperti plastik, kayu, atau pasir. Peralatan yang digunakan antara lain:
+- **Screening:** Menyaring benda kasar
+- **Grit Chamber:** Mengendapkan partikel berat seperti pasir
+- **Equalization Tank:** Menyeimbangkan aliran dan beban limbah
 
-    st.markdown("## 2. Pengolahan Primer")
-    st.image("https://www.researchgate.net/profile/Azam-Rashidi/publication/317398778/figure/fig1/AS:613808246849546@1523377437292/Schematic-of-primary-treatment-process-of-wastewater.png", caption="Skema pengendapan primer")
-    st.markdown("""
-    Limbah dialirkan ke tangki pengendapan untuk memisahkan partikel tersuspensi secara gravitasi.
-    Hasil: air limbah lebih jernih & lumpur primer.
-    """)
+<div class="section-title">2. Pengolahan Primer</div>
+Bertujuan menghilangkan padatan tersuspensi dengan cara pengendapan. Lumpur hasil endapan dikumpulkan sebagai **primary sludge**.
+- **Primary Clarifier:** Tangki pengendapan yang memisahkan lumpur dari cairan limbah
 
-    st.markdown("## 3. Pengolahan Sekunder")
-    st.image("https://www.epa.ie/media/epa/images/secondary-treatment.jpg", caption="Proses biologis dengan mikroorganisme")
-    st.markdown("""
-    Menggunakan mikroorganisme aerob atau anaerob untuk menguraikan bahan organik.
-    Sistem umum: *lumpur aktif, **kolam oksidasi, **biofilter*.
-    """)
+<div class="section-title">3. Pengolahan Sekunder (Biologis)</div>
+Proses biologis untuk menguraikan bahan organik menggunakan mikroorganisme.
+- **Proses Aerob:** Menggunakan oksigen (misalnya activated sludge, trickling filter)
+- **Proses Anaerob:** Tanpa oksigen, sering digunakan untuk lumpur atau limbah berkonsentrasi tinggi
 
-    st.markdown("## 4. Pengolahan Tersier")
-    st.image("https://www.researchgate.net/publication/327157481/figure/fig3/AS:666554944987141@1536104400082/Tertiary-Treatment-of-Wastewater.png", caption="Disinfeksi dan penghilangan nutrien")
-    st.markdown("""
-    Menghilangkan polutan lanjutan seperti fosfat, nitrat, logam berat, dan mikroorganisme patogen.
-    Teknologi: *ozonisasi, **UV, **filtrasi pasir, **reverse osmosis*.
-    """)
+<div class="section-title">4. Pengolahan Tersier (Lanjutan)</div>
+Menghilangkan kontaminan yang tersisa, seperti nutrien, logam berat, atau bahan kimia.
+- **Filtrasi Pasir, Karbon Aktif**
+- **Reverse Osmosis (RO)**
+- **Proses Kimia:** Koagulasi, flokulasi, dan disinfeksi (klorinasi, UV)
 
-    st.markdown("## 5. Pembuangan Akhir")
-    st.image("https://www.aqua-calc.com/images/discharge.png", caption="Pembuangan ke badan air")
-    st.markdown("""
-    Air limbah yang telah memenuhi standar baku mutu dibuang ke sungai, laut, atau dimanfaatkan kembali (reuse).
-    Lumpur sisa diolah dengan pengeringan atau pembakaran.
-    """)
+<div class="section-title">5. Pengolahan Lumpur (Sludge Treatment)</div>
+Lumpur dari tahap primer dan sekunder perlu diolah sebelum dibuang atau dimanfaatkan.
+- **Thickening, Dewatering**
+- **Digestion:** Proses biologis untuk mengurangi volume dan stabilisasi
+- **Pengeringan dan Pembakaran (jika perlu)**
 
-    st.markdown("---")
-    st.markdown("## Video Edukasi Pendek")
-
-    st.video("https://www.youtube.com/watch?v=U1c_XK1uK5I")
-    st.caption("Animasi proses pengolahan limbah yang sederhana dan mudah dipahami.")
-
-    st.video("https://www.youtube.com/watch?v=Wffd9BynYO0")
-    st.caption("Simulasi 3D sistem pengolahan air limbah secara komprehensif.")
-
-    st.success("Dengan memahami tahapan ini, kita dapat menjaga lingkungan dari pencemaran limbah secara lebih efektif.")
+<div class="section-title">6. Pembuangan Akhir</div>
+Air hasil olahan yang telah memenuhi baku mutu dibuang ke badan air seperti sungai atau laut, atau digunakan kembali (reuse) untuk keperluan industri atau pertanian.
+""", unsafe_allow_html=True)
 # KALKULATOR LAB
 elif menu == "Uji Lab":
     st.markdown('<div class="main-title">Kalkulator Uji Lab</div>', unsafe_allow_html=True)
