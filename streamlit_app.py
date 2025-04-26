@@ -6,20 +6,6 @@ st.set_page_config(page_title="Limbah Industri", layout="wide")
 # Navigasi Sidebar
 menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
 
-# Background image styling
-st.markdown("""
-    <style>
-        body{
-            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fliberty-society.com%2Fid%2Fblogs%2Fblog-1%2Fdaur-ulang-sampah-kertas&psig=AOvVaw3IknIiqzLjstZEFSm1Vrv8&ust=1745718968002000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiLsLjM9IwDFQAAAAAdAAAAABAE')
-            background-position: center;
-            background-size: cover;
-            text-aligin: center;
-            height: 100vh;
-            padding: 100px;
-        }
-        
-    </style>
-
 # BERANDA
 if menu == "Beranda":
     st.markdown('<div class="main-title">Aplikasi Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
