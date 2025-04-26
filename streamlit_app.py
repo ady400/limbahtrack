@@ -24,10 +24,9 @@ if menu == "Beranda":
 elif menu == "Proses":
     st.markdown('<div class="main-title">Tahapan Pengolahan Limbah</div>', unsafe_allow_html=True)
     st.markdown("""
-   🌊 1. Limbah Cair (misalnya air limbah rumah tangga atau industri)*
+   🌊 1. Limbah Cair (misalnya air limbah rumah tangga atau industri)
 a. Pra-pengolahan
 Penyaringan kasar → buang sampah besar (plastik, kain, kayu).
-
 Pemisahan pasir → singkirkan partikel berat (pasir, kerikil).
 
 b. Pengolahan Primer
@@ -42,26 +41,20 @@ Menghilangkan nutrien, logam berat, dan mikroorganisme → pakai filtrasi, karbo
 e. Desinfeksi
 Membunuh bakteri patogen → pakai klorin, ozon, atau sinar UV.
 
-🗑️ 2. Limbah Padat (misalnya sampah rumah tangga, pasar, industri)
+   🗑️ 2. Limbah Padat (misalnya sampah rumah tangga, pasar, industri)
 a. Pemilahan
 Pisahkan organik, anorganik, daur ulang, dan B3.
 
 b. Pengolahan
 Organik → dikomposkan (jadi pupuk).
-
 Anorganik → didaur ulang (plastik, kaca, logam).
-
 B3 (berbahaya) → diinsinerasi atau ditangani khusus.
-
 Sisa akhir → dibuang ke TPA (Tempat Pembuangan Akhir) atau Sanitary Landfill.
 
-🧪 3. Limbah B3 (Bahan Berbahaya & Beracun)
+    🧪 3. Limbah B3 (Bahan Berbahaya & Beracun)
 Identifikasi & Penyimpanan → diberi label khusus, disimpan sesuai jenisnya.
-
 Netralisasi / Stabilisasi → ubah bentuk kimia jadi tidak berbahaya.
-
 Insinerasi (pembakaran suhu tinggi) → bakar zat berbahaya.
-
 Penguburan khusus → di landfill B3 berizin.
 
 
