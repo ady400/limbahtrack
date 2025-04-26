@@ -49,19 +49,6 @@ elif menu == "Uji Lab":
         if st.button("Hitung"):
             hasil = awal - akhir
             st.success(f"BOD = {hasil:.2f} mg/L")
-
-    elif uji == "TSS":
-        awal = st.number_input("Berat filter awal (mg)", value=100.0)
-        akhir = st.number_input("Berat filter akhir (mg)", value=120.0)
-        volume = st.number_input("Volume sampel (L)", value=1.0)
-        if st.button("Hitung"):
-            hasil = (akhir - awal) / volume
-            st.success(f"TSS = {hasil:.2f} mg/L")
-
-    elif uji == "pH":
-        ph = st.slider("pH sampel", 0.0, 14.0, 7.0)
-        st.info(f"pH = {ph}")
-
 # SIMULASI
 elif menu == "Simulasi":
     st.markdown('<div class="main-title">Simulasi Pengolahan</div>', unsafe_allow_html=True)
