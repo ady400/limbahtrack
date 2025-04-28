@@ -34,7 +34,6 @@ if menu == "Beranda":
         st.write("Lakukan simulasi pengolahan limbah dengan berbagai jenis.")
     
 # PROSES
-# PROSES
 if menu == "Proses":
     st.markdown('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
