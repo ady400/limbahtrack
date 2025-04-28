@@ -6,18 +6,9 @@ import streamlit as st
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Industri", layout="wide")
 
-# Sidebar
-with st.sidebar:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_industry.png/600px-Logo_industry.png", width=120)  # contoh logo
-    st.title("🌱 Limbah Industri")
-    st.markdown("---")  # garis pemisah
+# Navigasi Sidebar 
+menu = st.sidebar.radio("Menu", ["Beranda", "Proses", "Uji Lab", "Simulasi", "Tentang"])
 
-    st.write("Selamat datang! 👋🏼\n\nAplikasi ini membantu mengelola dan mensimulasikan pengolahan limbah industri secara efektif.")
-    
-    st.markdown("---")
-
-    menu = st.radio("**Navigasi Menu**", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Simulasi", "ℹ️ Tentang"])
-    
 # BERANDA
 if menu == "Beranda":
     st.markdown("""
