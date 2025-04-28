@@ -35,7 +35,7 @@ if menu == "Beranda":
     
 # PROSES
 if menu == "Proses":
-    st.markdown('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
+    st.header('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
     ### 🧹 1. Pra-Pengolahan (Pre-Treatment)
     - *Screening:* Menyaring benda kasar seperti plastik dan kayu.
