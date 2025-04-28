@@ -1,2 +1,3 @@
-streamlit 
-python-pdf
+streamlit
+pandas
+numpy
