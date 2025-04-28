@@ -9,7 +9,7 @@ st.set_page_config(page_title="Limbah Industri", page_icon="♻️", layout="wid
 # Sidebar
 with st.sidebar:
     st.title("♻️ Limbah Track")
-    st.markdown("**Belajar & Simulasi Pengolahan Limbah Industri** 🌍")
+    st.markdown("🌍**Belajar & Simulasi Pengolahan Limbah Industri** 🌍")
     st.markdown("---")
     menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Simulasi", "ℹ️ Tentang"])
     st.markdown("---")
