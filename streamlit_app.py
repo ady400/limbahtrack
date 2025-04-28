@@ -17,21 +17,6 @@ with st.sidebar:
     st.markdown("---")
 
     menu = st.radio("**Navigasi Menu**", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Simulasi", "ℹ️ Tentang"])
-
-# Konten halaman (contoh)
-if menu == "🏠 Beranda":
-    st.title("Selamat Datang di Aplikasi Limbah Industri")
-    st.write("Ini adalah halaman utama.")
-elif menu == "⚙️ Proses":
-    st.title("Proses Pengolahan Limbah")
-elif menu == "🧪 Uji Lab":
-    st.title("Uji Laboratorium Limbah")
-elif menu == "🧩 Simulasi":
-    st.title("Simulasi Proses Limbah")
-elif menu == "ℹ️ Tentang":
-    st.title("Tentang Aplikasi Ini")
-
-
     
 # BERANDA
 if menu == "Beranda":
