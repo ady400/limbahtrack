@@ -2,6 +2,7 @@ import time
 import numpy as np
 import pandas as pd
 import streamlit as st
+import io
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Industri", page_icon="♻️", layout="wide")
@@ -23,10 +24,18 @@ st.markdown("""
         color: #2C3E50;
         text-align: center;
         padding: 20px 0;
+        animation: fadeIn 2s;
     }
     .stButton>button {
         background-color: #2C3E50;
         color: white;
+    }
+    body {
+        background-color: #f5f9ff;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
     </style>
 """, unsafe_allow_html=True)
@@ -92,6 +101,9 @@ elif menu == "🧪 Uji Lab":
         if st.button("Hitung COD"):
             hasil = (v * n * 8000) / vs
             st.success(f"COD = {hasil:.2f} mg/L")
+            buffer = io.StringIO()
+            buffer.write(f"Hasil Uji COD\nVolume titran: {v} mL\nNormalitas: {n} N\nVolume sampel: {vs} mL\n=> COD = {hasil:.2f} mg/L")
+            st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_uji_cod.txt")
 
     elif uji == "BOD":
         awal = st.number_input("DO Awal (mg/L)", value=8.0)
@@ -99,6 +111,9 @@ elif menu == "🧪 Uji Lab":
         if st.button("Hitung BOD"):
             hasil = awal - akhir
             st.success(f"BOD = {hasil:.2f} mg/L")
+            buffer = io.StringIO()
+            buffer.write(f"Hasil Uji BOD\nDO Awal: {awal} mg/L\nDO Akhir: {akhir} mg/L\n=> BOD = {hasil:.2f} mg/L")
+            st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_uji_bod.txt")
 
     elif uji == "TSS":
         awal = st.number_input("Berat filter awal (mg)", value=100.0)
@@ -107,6 +122,9 @@ elif menu == "🧪 Uji Lab":
         if st.button("Hitung TSS"):
             hasil = (akhir - awal) / volume
             st.success(f"TSS = {hasil:.2f} mg/L")
+            buffer = io.StringIO()
+            buffer.write(f"Hasil Uji TSS\nBerat awal: {awal} mg\nBerat akhir: {akhir} mg\nVolume: {volume} L\n=> TSS = {hasil:.2f} mg/L")
+            st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_uji_tss.txt")
 
     elif uji == "pH":
         ph = st.slider("pH sampel", 0.0, 14.0, 7.0)
@@ -119,9 +137,13 @@ elif menu == "🧩 Simulasi":
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
 
     efisiensi = {"Organik": 0.85, "Kimia": 0.70, "Campuran": 0.60}[jenis]
-    if st.button("Mulai Simulasi"):
+    if st.button("▶️ Mulai Simulasi"):
         akhir = awal * (1 - efisiensi)
         st.success(f"Hasil akhir: {akhir:.2f} mg/L ({efisiensi*100:.0f}% efisiensi)")
+
+        buffer = io.StringIO()
+        buffer.write(f"Simulasi Pengolahan Limbah\nJenis: {jenis}\nKonsentrasi awal: {awal} mg/L\nEfisiensi: {efisiensi*100:.0f}%\n=> Hasil akhir: {akhir:.2f} mg/L")
+        st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_simulasi.txt")
 
 # TENTANG
 elif menu == "ℹ️ Tentang":
@@ -134,4 +156,3 @@ elif menu == "ℹ️ Tentang":
     - **Versi:** 1.0
     - **Sumber:** Modul Teknik Lingkungan, Litbang KLHK
     """)
-                
