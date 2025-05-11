@@ -15,8 +15,12 @@ def load_lottie_url(url):
 
 # Lottie animations
 lottie_beranda = load_lottie_url("https://lottie.host/947d937e-1b76-43a0-b786-d255c0ee1e74/stE5uwmVhW.json")
-lottie_lab = load_lottie_url("https://lottie.host/4f90617b-a17d-4947-8ae8-3f2e11b0243d/koIq19L8iq.json")
+lottie_lab = load_lottie_url("https://lottie.host/ad0ad4a2-3e19-4bc4-a8f8-6447dbc72c73/s5hNdaq1uX.json")
 lottie_simulasi = load_lottie_url("https://lottie.host/452e722c-e5f7-4a5a-bdaa-4f46c93a4ee6/FlkgyfRxKz.json")
+lottie_proses = load_lottie_url("https://lottie.host/83a75fcc-2836-4020-ba68-10b9e0f7aa75/RTuEA9yHNB.json")
+lottie_edukasi = load_lottie_url("https://lottie.host/30b3a6b0-a898-4862-a498-5600b93ee6a7/R9YyJLBYSA.json")
+lottie_laboratorium = load_lottie_url("https://lottie.host/512b24b7-72c0-4868-93cf-641162ab8ce5/y2TUFxINa1.json")
+lottie_interaktif = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
 
 
 # Konfigurasi halaman
@@ -57,7 +61,7 @@ st.markdown("""
 
 # BERANDA
 if menu == "🏠 Beranda":
-    st_lottie(lottie_beranda, speed=1, loop=True, quality="high", height=250)
+    st_lottie(lottie_beranda, speed=1, loop=True, quality="high", height=300)
     st.markdown("""
     <div style='text-align: center; padding: 30px 0;'>
         <h1 style='color:#2C3E50;'>♻️ Manajemen & Edukasi Limbah Industri ♻️</h1>
@@ -67,20 +71,21 @@ if menu == "🏠 Beranda":
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("https://cdn-icons-png.flaticon.com/512/1866/1866365.png", width=80)
+        st_lottie(lottie_edukasi, speed=1, loop=True, quality="high", height=150)
         st.markdown("### Edukasi Proses")
         st.write("Kenali tahapan pengolahan limbah dari awal hingga akhir.")
     with col2:
-        st.image("https://cdn-icons-png.flaticon.com/512/3135/3135823.png", width=80)
+        st_lottie(lottie_laboratorium, speed=1, loop=True, quality="high", height=150)
         st.markdown("### Uji Laboratorium")
         st.write("Hitung nilai COD, BOD, TSS, dan pH dari data sampel.")
     with col3:
-        st.image("https://cdn-icons-png.flaticon.com/512/2933/2933820.png", width=80)
+        st_lottie(lottie_interaktif, speed=1, loop=True, quality="high", height=150)
         st.markdown("### Simulasi Interaktif")
         st.write("Lakukan simulasi pengolahan limbah dengan berbagai jenis.")
 
 # PROSES
 elif menu == "⚙️ Proses":
+    st_lottie(lottie_proses, speed=1, loop=True, quality="high", height=200)
     st.markdown('<div class="main-title">⚙️ Tahapan Pengolahan Limbah Industri</div>', unsafe_allow_html=True)
     st.markdown("""
     ### 🧹 1. Pra-Pengolahan (Pre-Treatment)
@@ -165,7 +170,7 @@ elif menu == "🧩 Simulasi":
 
 # TENTANG
 elif menu == "ℹ️ Tentang":
-    st.markdown('<div class="main-title">ℹ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">ℹ️ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
 
