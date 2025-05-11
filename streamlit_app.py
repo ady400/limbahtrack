@@ -22,7 +22,7 @@ lottie_edukasi = load_lottie_url("https://lottie.host/30b3a6b0-a898-4862-a498-56
 lottie_laboratorium = load_lottie_url("https://lottie.host/512b24b7-72c0-4868-93cf-641162ab8ce5/y2TUFxINa1.json")
 lottie_interaktif = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
 lottie_sidebar = load_lottie_url("https://lottie.host/14ad633a-079f-4eb7-8315-d93d14a0874f/xgF0Fhh9O9.json")
-
+lottie_tentang = load_lottie_url("https://lottie.host/357b3868-03be-42ef-a653-7c6acc5c0e6a/Th1MDXhVNY.json")
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
@@ -176,7 +176,8 @@ elif menu == "🧩 Simulasi":
 
 # TENTANG
 elif menu == "ℹ️ Tentang":
-    st.markdown('<div class="main-title">ℹ️ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
+     st_lottie(lottie_tentang, speed=1, loop=True, quality="high", height=200)
+    st.markdown('<div class="main-title">ℹ️ Tentang Website</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
 
