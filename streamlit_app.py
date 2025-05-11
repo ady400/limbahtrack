@@ -101,10 +101,14 @@ elif menu == "⚙️ Proses":
     - Anaerob: Tanpa oksigen untuk limbah berat.
 
     ### 🧼 4. Pengolahan Tersier
-    - Filtrasi, Reverse Osmosis, Proses Kimia.
+    - Filtrasi: Menghilangkan partikel padat tersuspensi (seperti lumpur, pasir, dan kotoran halus) dari air.
+    - Reverse Osmosis: Menghilangkan zat terlarut seperti garam, logam berat, dan senyawa kimia dari air.
+    - Proses Kimia: Mengendapkan, menetralkan, atau menghancurkan zat kimia berbahaya di air limbah.
 
     ### 🧱 5. Pengolahan Lumpur
-    - Thickening, Digestion, Dewatering.
+    - Thickening: Mengurangi volume lumpur dengan cara menghilangkan sebagian air bebas.
+    - Digestion: Menguraikan bahan organik dalam lumpur agar lebih stabil dan tidak berbau.
+    - Dewatering: Mengurangi kadar air lumpur sebanyak mungkin agar mudah diangkut dan dibuang.
 
     ### 🌊 6. Pembuangan Akhir
     - Limbah cair buangan yang memenuhi standar.
