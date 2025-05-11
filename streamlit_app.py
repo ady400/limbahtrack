@@ -5,6 +5,8 @@ import streamlit as st
 import io
 from streamlit_lottie import st_lottie
 import requests
+import io
+import plotly.graph_objects as go
 
 # Fungsi untuk memuat animasi lottie dari URL
 def load_lottie_url(url):
