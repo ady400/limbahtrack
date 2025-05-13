@@ -65,7 +65,7 @@ st.markdown("""
 
 # BERANDA
 if menu == "🏠 Beranda":
-    st_lottie(lottie_beranda, speed=1, loop=True, quality="high", height=300)
+    st_lottie(lottie_beranda, speed=1, loop=True, quality="high", height=350)
     st.markdown("""
         <style>
         .hero {
