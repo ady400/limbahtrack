@@ -33,7 +33,7 @@ st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
 with st.sidebar:
     st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=150)
     st.title("♻️ Limbah Track")
-    st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
+    st.markdown("Belajar & Menghitung Pengolahan Limbah Industri 🌍")
     st.markdown("---")
     menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Simulasi", "ℹ️ Tentang"])
     st.markdown("---")
@@ -80,7 +80,7 @@ if menu == "🏠 Beranda":
         </style>
         <div class='hero'>
             <h1>♻️ Manajemen & Edukasi Limbah Industri ♻️</h1>
-            <p>Belajar dan simulasi proses pengolahan limbah industri secara interaktif dan edukatif.</p>
+            <p>Belajar dan menghitung pengolahan limbah industri secara interaktif dan edukatif.</p>
         </div>
     """, unsafe_allow_html=True)
 
