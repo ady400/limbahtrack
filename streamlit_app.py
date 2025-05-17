@@ -24,7 +24,7 @@ lottie_edukasi = load_lottie_url("https://lottie.host/30b3a6b0-a898-4862-a498-56
 lottie_laboratorium = load_lottie_url("https://lottie.host/512b24b7-72c0-4868-93cf-641162ab8ce5/y2TUFxINa1.json")
 lottie_interaktif = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
 lottie_sidebar = load_lottie_url("https://lottie.host/46d5d5e6-71ac-47f0-b042-9d7bece4d120/KUFhym6hHY.json")
-lottie_tentang = load_lottie_url("https://lottie.host/357b3868-03be-42ef-a653-7c6acc5c0e6a/Th1MDXhVNY.json")
+lottie_tentang = load_lottie_url("https://lottie.host/2ca14505-599f-44fc-9516-fa2213084686/vW634tXhdC.json")
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
