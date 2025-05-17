@@ -245,6 +245,19 @@ elif menu == "🧪 Uji Lab":
 elif menu == "🧩 Baku Mutu":
     st_lottie(lottie_simulasi, speed=1, loop=True, quality="high", height=200)
     st.markdown('<div class="main-title">🧩 Baku Mutu Pengolahan Limbah</div>', unsafe_allow_html=True)
+
+    st.markdown("### 📘 Rumus Pengurangan Konsentrasi Limbah:")
+    st.latex(r'''
+    C_{\text{akhir}} = C_{\text{awal}} \times (1 - \text{efisiensi})
+    ''')
+    st.markdown("""
+    **Keterangan:**  
+    - \( C_{\\text{awal}} \): Konsentrasi awal limbah (mg/L)  
+    - \( \text{efisiensi} \): Efisiensi pengolahan limbah (%)  
+    - \( C_{\\text{akhir}} \): Konsentrasi limbah setelah pengolahan (mg/L)  
+    untuk efesiensi yaitu mengikuti baku mutu yaitu kimia 80%, organik 70% dan campuran 60% sesuai baku mutu PERMENLHK No. 5 Tahun 2014
+    """)
+    
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
 
