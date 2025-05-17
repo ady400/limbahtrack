@@ -31,7 +31,7 @@ st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
 
 # Sidebar
 with st.sidebar:
-    st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=350)
+    st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=150)
     st.title("♻️ Limbah Track")
     st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
     st.markdown("---")
