@@ -23,17 +23,15 @@ lottie_proses = load_lottie_url("https://lottie.host/83a75fcc-2836-4020-ba68-10b
 lottie_edukasi = load_lottie_url("https://lottie.host/30b3a6b0-a898-4862-a498-5600b93ee6a7/R9YyJLBYSA.json")
 lottie_laboratorium = load_lottie_url("https://lottie.host/512b24b7-72c0-4868-93cf-641162ab8ce5/y2TUFxINa1.json")
 lottie_interaktif = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
-lottie_sidebar = load_lottie_url("https://lottie.host/14ad633a-079f-4eb7-8315-d93d14a0874f/xgF0Fhh9O9.json")
-lottie_tentang = load_lottie_url("https://lottie.host/357b3868-03be-42ef-a653-7c6acc5c0e6a/Th1MDXhVNY.json")
+
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
 
 # Sidebar
 with st.sidebar:
-    st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=150)
     st.title("♻️ Limbah Track")
-    st.markdown("Belajar & Menghitung Pengolahan Limbah Industri 🌍")
+    st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
     st.markdown("---")
     menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Simulasi", "ℹ️ Tentang"])
     st.markdown("---")
@@ -80,7 +78,7 @@ if menu == "🏠 Beranda":
         </style>
         <div class='hero'>
             <h1>♻️ Manajemen & Edukasi Limbah Industri ♻️</h1>
-            <p>Belajar dan menghitung pengolahan limbah industri secara interaktif dan edukatif.</p>
+            <p>Belajar dan simulasi proses pengolahan limbah industri secara interaktif dan edukatif.</p>
         </div>
     """, unsafe_allow_html=True)
 
@@ -116,14 +114,10 @@ elif menu == "⚙️ Proses":
     - Anaerob: Tanpa oksigen untuk limbah berat.
 
     ### 🧼 4. Pengolahan Tersier
-    - Filtrasi: Menghilangkan partikel padat tersuspensi (seperti lumpur, pasir, dan kotoran halus) dari air.
-    - Reverse Osmosis: Menghilangkan zat terlarut seperti garam, logam berat, dan senyawa kimia dari air.
-    - Proses Kimia: Mengendapkan, menetralkan, atau menghancurkan zat kimia berbahaya di air limbah.
+    - Filtrasi, Reverse Osmosis, Proses Kimia.
 
     ### 🧱 5. Pengolahan Lumpur
-    - Thickening: Mengurangi volume lumpur dengan cara menghilangkan sebagian air bebas.
-    - Digestion: Menguraikan bahan organik dalam lumpur agar lebih stabil dan tidak berbau.
-    - Dewatering: Mengurangi kadar air lumpur sebanyak mungkin agar mudah diangkut dan dibuang.
+    - Thickening, Digestion, Dewatering.
 
     ### 🌊 6. Pembuangan Akhir
     - Limbah cair buangan yang memenuhi standar.
@@ -233,16 +227,15 @@ elif menu == "🧩 Simulasi":
         buffer = io.StringIO()
         buffer.write(f"Simulasi Pengolahan Limbah\nJenis: {jenis}\nKonsentrasi awal: {awal} mg/L\nEfisiensi: {efisiensi*100:.0f}%\n=> Hasil akhir: {akhir:.2f} mg/L")
         st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_simulasi.txt")
-                
 
+        
 # TENTANG
 elif menu == "ℹ️ Tentang":
-    st_lottie(lottie_tentang, speed=1, loop=True, quality="high", height=200)
-    st.markdown('<div class="main-title">Tentang Website</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">ℹ️ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
 
-    - Teknologi: Pandas + Streamlit + lottie + numpy + plotly
+    - Teknologi: Python + Streamlit
     - Pengembang: Kelompok 6 - 1F PLI AKA
     - Versi: 1.0
     - Sumber: Modul Teknik Lingkungan, Litbang KLHK
