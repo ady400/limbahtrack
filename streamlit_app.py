@@ -35,7 +35,7 @@ with st.sidebar:
     st.title("♻️ Limbah Track")
     st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
     st.markdown("---")
-    menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Baku Mutu", "ℹ️ Tentang"])
+    menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Konsentrasi Limbah", "ℹ️ Tentang"])
     st.markdown("---")
     st.caption("© 2025 Kelompok 6 - 1F PLI AKA")
 
@@ -242,9 +242,9 @@ elif menu == "🧪 Uji Lab":
         st.plotly_chart(fig)
 
 # SIMULASI
-elif menu == "🧩 Baku Mutu":
+elif menu == "🧩 Konsentrasi Limbah":
     st_lottie(lottie_simulasi, speed=1, loop=True, quality="high", height=200)
-    st.markdown('<div class="main-title">🧩 Baku Mutu Pengolahan Limbah</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">🧩 Perhitungan konsentrasi Limbah</div>', unsafe_allow_html=True)
 
     st.markdown("### Rumus Pengurangan Konsentrasi Limbah:")
     st.latex(r'''
