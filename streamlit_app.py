@@ -166,6 +166,17 @@ elif menu == "🧪 Uji Lab":
             st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_uji_cod.txt")
 
     elif uji == "BOD":
+        st.markdown("### Rumus Umum BOD:")
+        st.latex(r'''
+            \text{BOD (mg/L)} = D_1 - D_2
+            ''')
+
+        st.markdown("""
+            Keterangan:  
+            - \( D_1 \): Konsentrasi DO awal (sebelum inkubasi)  
+            - \( D_2 \): Konsentrasi DO akhir (setelah inkubasi 5 hari)  
+            """)
+        
         awal = st.number_input("DO Awal (mg/L)", value=8.0)
         akhir = st.number_input("DO Akhir (mg/L)", value=2.0)
         if st.button("Hitung BOD"):
