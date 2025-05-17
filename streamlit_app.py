@@ -289,5 +289,5 @@ elif menu == "ℹ️ Tentang":
     - Teknologi: Python + Streamlit
     - Pengembang: Kelompok 6 - 1F PLI AKA
     - Versi: 1.0
-    - Sumber: Modul Teknik Lingkungan, Litbang KLHK
+    - Sumber: Modul Teknik Lingkungan, Litbang KLHK, PERMENLHK No. 5 Tahun 2014
     """)
