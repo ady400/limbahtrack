@@ -253,7 +253,7 @@ elif menu == "🧩 Konsentrasi":
     st.markdown("""
     **Keterangan:**  
     - \( C_awal \): Konsentrasi awal limbah (mg/L)  
-    - \( \ efisiensi \): Efisiensi pengolahan limbah (%)  
+    - \( efisiensi \): Efisiensi pengolahan limbah (%)  
     - \( C_akhir \): Konsentrasi limbah setelah pengolahan (mg/L)  
     """)
     
