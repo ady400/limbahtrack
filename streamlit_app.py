@@ -23,13 +23,15 @@ lottie_proses = load_lottie_url("https://lottie.host/83a75fcc-2836-4020-ba68-10b
 lottie_edukasi = load_lottie_url("https://lottie.host/30b3a6b0-a898-4862-a498-5600b93ee6a7/R9YyJLBYSA.json")
 lottie_laboratorium = load_lottie_url("https://lottie.host/512b24b7-72c0-4868-93cf-641162ab8ce5/y2TUFxINa1.json")
 lottie_interaktif = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
-
+lottie_sidebar = load_lottie_url("https://lottie.host/46d5d5e6-71ac-47f0-b042-9d7bece4d120/KUFhym6hHY.json")
+lottie_tentang = load_lottie_url("https://lottie.host/05ce74d8-a548-48b4-9dd0-04ec7c20bec1/gKJaJSYHw1.json")
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Limbah Track", page_icon="♻️", layout="wide")
 
 # Sidebar
 with st.sidebar:
+    st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=350)
     st.title("♻️ Limbah Track")
     st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
     st.markdown("---")
