@@ -86,15 +86,15 @@ if menu == "🏠 Beranda":
     with col1:
         st_lottie(lottie_edukasi, speed=1, loop=True, quality="high", height=150)
         st.markdown("### Edukasi Proses")
-        st.write("Kenali tahapan pengolahan limbah dari awal hingga akhir.")
+        st.write("Kenali tahapan proses pemisahan pengolahan limbah dari awal.")
     with col2:
         st_lottie(lottie_laboratorium, speed=1, loop=True, quality="high", height=150)
         st.markdown("### Uji Laboratorium")
         st.write("Hitung nilai COD, BOD, TSS, dan pH dari data sampel.")
     with col3:
         st_lottie(lottie_interaktif, speed=1, loop=True, quality="high", height=150)
-        st.markdown("### Simulasi Interaktif")
-        st.write("Lakukan simulasi pengolahan limbah dengan berbagai jenis.")
+        st.markdown("### perhitungan simulasi")
+        st.write("Lakukan perhitungan kadar limbah yang bisa dibuang sesuai baku mutu.")
 
 # PROSES
 elif menu == "⚙️ Proses":
@@ -204,9 +204,9 @@ elif menu == "🧪 Uji Lab":
         st.plotly_chart(fig)
 
 # SIMULASI
-elif menu == "🧩 Simulasi":
+elif menu == "🧩 Baku Mutu":
     st_lottie(lottie_simulasi, speed=1, loop=True, quality="high", height=200)
-    st.markdown('<div class="main-title">🧩 Simulasi Pengolahan Limbah</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-title">🧩 Baku Mutu Pengolahan Limbah</div>', unsafe_allow_html=True)
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
     awal = st.number_input("Konsentrasi awal (mg/L)", value=500.0)
 
