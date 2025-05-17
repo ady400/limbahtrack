@@ -78,7 +78,7 @@ if menu == "🏠 Beranda":
         </style>
         <div class='hero'>
             <h1>♻️ Manajemen & Edukasi Limbah Industri ♻️</h1>
-            <p>Belajar dan menghitung proses pengolahan limbah industri secara baku mutu.</p>
+            <p>Belajar dan menghitung bagaimana pengolahan limbah industri secara baku mutu.</p>
         </div>
     """, unsafe_allow_html=True)
 
