@@ -35,7 +35,7 @@ with st.sidebar:
     st.title("♻️ Limbah Track")
     st.markdown("Belajar & Simulasi Pengolahan Limbah Industri 🌍")
     st.markdown("---")
-    menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Konsentrasi Limbah", "ℹ️ Tentang"])
+    menu = st.radio("Navigasi", ["🏠 Beranda", "⚙️ Proses", "🧪 Uji Lab", "🧩 Konsentrasi", "ℹ️ Tentang"])
     st.markdown("---")
     st.caption("© 2025 Kelompok 6 - 1F PLI AKA")
 
@@ -242,7 +242,7 @@ elif menu == "🧪 Uji Lab":
         st.plotly_chart(fig)
 
 # SIMULASI
-elif menu == "🧩 Konsentrasi Limbah":
+elif menu == "🧩 Konsentrasi":
     st_lottie(lottie_simulasi, speed=1, loop=True, quality="high", height=200)
     st.markdown('<div class="main-title">🧩 Perhitungan konsentrasi Limbah</div>', unsafe_allow_html=True)
 
@@ -252,9 +252,9 @@ elif menu == "🧩 Konsentrasi Limbah":
     ''')
     st.markdown("""
     **Keterangan:**  
-    - \( C_{\\text{awal}} \): Konsentrasi awal limbah (mg/L)  
-    - \( \text{efisiensi} \): Efisiensi pengolahan limbah (%)  
-    - \( C_{\\text{akhir}} \): Konsentrasi limbah setelah pengolahan (mg/L)  
+    - \( C_awal \): Konsentrasi awal limbah (mg/L)  
+    - \( \ efisiensi \): Efisiensi pengolahan limbah (%)  
+    - \( C_akhir \): Konsentrasi limbah setelah pengolahan (mg/L)  
     """)
     
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
