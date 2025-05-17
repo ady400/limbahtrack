@@ -131,6 +131,20 @@ elif menu == "🧪 Uji Lab":
     uji = st.selectbox("Pilih jenis uji:", ["COD", "BOD", "TSS", "pH"])
 
     if uji == "COD":
+        st.markdown("### Rumus Umum COD:")
+        st.latex(r'''
+            \text{COD (mg/L)} = \frac{(V_b - V_s) \times N \times 8000}{V_{\text{sampel}}}
+            ''')
+
+        st.markdown("""
+            Keterangan:  
+            - \( V_b \): Volume titran untuk blanko (mL)  
+            - \( V_s \): Volume titran untuk sampel (mL)  
+            - \( N \): Normalitas larutan FAS (N)  
+            - \( V_{\text{sampel}} \): Volume sampel (mL)  
+            """)
+             
+                 
         v = st.number_input("Volume titran (mL)", value=10.0)
         n = st.number_input("Normalitas titran (N)", value=0.25)
         vs = st.number_input("Volume sampel (mL)", value=50.0)
