@@ -255,7 +255,7 @@ elif menu == "🧩 Baku Mutu":
     - \( C_{\\text{awal}} \): Konsentrasi awal limbah (mg/L)  
     - \( \text{efisiensi} \): Efisiensi pengolahan limbah (%)  
     - \( C_{\\text{akhir}} \): Konsentrasi limbah setelah pengolahan (mg/L)  
-    untuk efesiensi yaitu mengikuti baku mutu yaitu kimia 80%, organik 70% dan campuran 60% sesuai baku mutu PERMENLHK No. 5 Tahun 2014
+untuk efesiensi yaitu kimia 80%, organik 70% dan campuran 60% sesuai baku mutu PERMENLHK No. 5 Tahun 2014
     """)
     
     jenis = st.selectbox("Jenis limbah", ["Organik", "Kimia", "Campuran"])
