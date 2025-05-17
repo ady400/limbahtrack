@@ -197,6 +197,17 @@ elif menu == "🧪 Uji Lab":
             st.download_button("📄 Unduh Hasil", buffer.getvalue(), file_name="hasil_uji_bod.txt")
 
     elif uji == "TSS":
+        st.markdown("### Rumus TSS:")
+        st.latex(r'''
+        \text{TSS (mg/L)} = \frac{(W_2 - W_1) \times 1000}{V}
+        ''')
+
+        st.markdown("""
+            Keterangan:  
+            - \( W_1 \): Berat kertas saring kosong (gram)  
+            - \( W_2 \): Berat kertas saring + padatan (gram)  
+            - \( V \): Volume sampel air (mL)  
+            """)
         awal = st.number_input("Berat filter awal (mg)", value=100.0)
         akhir = st.number_input("Berat filter akhir (mg)", value=120.0)
         volume = st.number_input("Volume sampel (L)", value=1.0)
