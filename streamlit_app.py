@@ -233,7 +233,7 @@ elif menu == "🧩 Baku Mutu":
         
 # TENTANG
 elif menu == "ℹ️ Tentang":
-    st_lottie(lottie_sidebar, speed=1, loop=True, quality="high", height=150)
+    st_lottie(lottie_tentang, speed=1, loop=True, quality="high", height=150)
     st.markdown('<div class="main-title">ℹ️ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
     st.write("""
     Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
