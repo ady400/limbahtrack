@@ -140,7 +140,7 @@ elif menu == "🧪 Uji Lab":
             Keterangan:  
             - \( V_b \): Volume titran untuk blanko (mL)  
             - \( V_s \): Volume titran untuk sampel (mL)  
-            - \( N \): Normalitas larutan FAS (N)  
+            - \( N \): Normalitas (N)  
             - \( V_{\text{sampel}} \): Volume sampel (mL)  
             """)
              
