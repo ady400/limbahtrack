@@ -307,6 +307,6 @@ elif menu == "ℹ️ Tentang":
 
     ### 👥 Pengembang:
     - Kelompok 6 – 1F PLI AKA
-    - Versi: 1.0 (2025)
+    - Versi: 1.1 (2025)
     """)
 
