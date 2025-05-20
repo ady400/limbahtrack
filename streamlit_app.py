@@ -284,10 +284,29 @@ elif menu == "ℹ️ Tentang":
     st_lottie(lottie_tentang, speed=1, loop=True, quality="high", height=150)
     st.markdown('<div class="main-title">ℹ️ Tentang Aplikasi Ini</div>', unsafe_allow_html=True)
     st.write("""
-    Aplikasi edukatif ini dibuat untuk mengenalkan proses pengolahan limbah industri secara interaktif.
+    **Limbah Track** adalah aplikasi edukatif interaktif yang dirancang untuk membantu pengguna memahami proses dan perhitungan pengolahan limbah industri cair.
 
-    - Teknologi: Python + Streamlit
-    - Pengembang: Kelompok 6 - 1F PLI AKA
-    - Versi: 1.0
-    - Sumber: Modul Teknik Lingkungan, Litbang KLHK, PERMENLHK No. 5 Tahun 2014
+    Aplikasi ini menampilkan simulasi pengolahan, uji laboratorium, serta perhitungan parameter kualitas air limbah seperti:
+    
+    - **COD** (Chemical Oxygen Demand)
+    - **BOD** (Biochemical Oxygen Demand)
+    - **TSS** (Total Suspended Solid)
+    - **pH** (derajat keasaman)
+
+    ### 🎯 Tujuan:
+    Membantu memahami batas baku mutu dan pentingnya pengolahan limbah cair industri agar tidak mencemari lingkungan.
+
+    ### 📚 Referensi:
+    - Modul Teknik Lingkungan
+    - Litbang KLHK
+    - **PERMENLHK No. 5 Tahun 2014** tentang Baku Mutu Air Limbah
+
+    ### 👨‍💻 Teknologi:
+    - Python + Streamlit
+    - Visualisasi interaktif (Plotly, Lottie)
+
+    ### 👥 Pengembang:
+    - Kelompok 6 – 1F PLI AKA
+    - Versi: 1.0 (2025)
     """)
+
